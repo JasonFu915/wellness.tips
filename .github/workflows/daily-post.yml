@@ -50,7 +50,7 @@ jobs:
           # Check if there are any changes
           if [[ -n $(git status -s) ]]; then
             git add content/
-            git commit -m "Auto-generated daily health tip [skip ci]"
+            git commit -m "Auto-generated daily health tip"
             git push
           else
             echo "No changes to commit"
