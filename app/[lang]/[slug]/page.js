@@ -1,10 +1,13 @@
 import Link from "next/link";
+import Image from "next/image";
 import AdBlock from "../../../components/AdBlock";
-import LanguageSwitcher from "../../../components/LanguageSwitcher";
+import Sidebar from "../../../components/Sidebar";
 import { markdownToHtml } from "../../../lib/markdown";
+import { buildCover } from "../../../lib/utils";
 import {
   formatDateByLocale,
   getAllSlugs,
+  getAllPosts,
   getPostBySlug,
   getSiteUrl
 } from "../../../lib/posts";
@@ -24,7 +27,8 @@ export async function generateMetadata({ params }) {
     openGraph: {
       title: post.title,
       description: post.description,
-      type: "article"
+      type: "article",
+      images: [buildCover(post.title, true)]
     }
   };
 }
@@ -40,13 +44,40 @@ function splitHtml(html) {
   return { first, second };
 }
 
+const backLabels = {
+  en: "Back to Home",
+  zh: "返回首页",
+  es: "Volver al Inicio",
+  fr: "Retour à l'accueil",
+  de: "Zurück zur Startseite"
+};
+
+import { notFound } from "next/navigation";
+
 export default async function PostDetailPage({ params }) {
   const post = getPostBySlug(params.lang, params.slug);
+  
+  if (!post) {
+    notFound();
+  }
+
   const html = await markdownToHtml(post.content);
   const { first, second } = splitHtml(html);
   const siteUrl = getSiteUrl();
   const adClient = process.env.NEXT_PUBLIC_ADSENSE_CLIENT;
+  const adSlot = process.env.NEXT_PUBLIC_ADSENSE_SLOT || "";
   const adsEnabled = process.env.NEXT_PUBLIC_ADSENSE_ENABLED === "true" && adClient;
+
+  // Get recent posts for sidebar
+  const allPosts = getAllPosts(params.lang);
+  
+  // Filter out current post
+  const sidebarPosts = allPosts
+    .filter(p => p.slug !== params.slug)
+    .map(p => ({
+      slug: p.slug,
+      title: p.title
+    }));
 
   const articleSchema = {
     "@context": "https://schema.org",
@@ -55,7 +86,8 @@ export default async function PostDetailPage({ params }) {
     description: post.description,
     datePublished: post.publishDate,
     inLanguage: post.lang,
-    mainEntityOfPage: `${siteUrl}/${params.lang}/${params.slug}`
+    mainEntityOfPage: `${siteUrl}/${params.lang}/${params.slug}`,
+    image: buildCover(post.title, true)
   };
 
   const websiteSchema = {
@@ -84,44 +116,120 @@ export default async function PostDetailPage({ params }) {
     ]
   };
 
+  const shareLabels = {
+    en: "Share this tip with friends and family",
+    zh: "与亲朋好友分享这条健康贴士",
+    es: "Comparte este consejo con amigos y familiares",
+    fr: "Partagez ce conseil avec vos amis et votre famille",
+    de: "Teilen Sie diesen Tipp mit Freunden und Familie"
+  };
+
   return (
-    <main className="mx-auto w-full max-w-3xl px-6 py-10">
-      <div className="mb-6 flex items-center justify-between">
-        <Link href={`/${params.lang}`} className="text-sm text-slate-500">
-          返回列表
-        </Link>
-        <LanguageSwitcher />
+    <div className="bg-slate-50 pb-20 pt-8">
+      <div className="container mx-auto max-w-7xl px-4">
+        {/* Breadcrumb & Back Link */}
+        <div className="mb-8 flex items-center gap-2 text-sm text-slate-500">
+          <Link href={`/${params.lang}`} className="hover:text-primary-600 transition-colors">
+            {backLabels[params.lang] || backLabels.en}
+          </Link>
+          <span className="text-slate-300">/</span>
+          <span className="truncate max-w-[200px] text-slate-400">{post.title}</span>
+        </div>
+
+        <div className="grid grid-cols-1 gap-12 lg:grid-cols-12">
+          {/* Main Content Column */}
+          <main className="lg:col-span-8">
+            <article className="overflow-hidden rounded-3xl bg-white shadow-sm ring-1 ring-slate-100">
+              {/* Cover Image */}
+              <div className="relative aspect-video w-full bg-slate-100">
+                <Image
+                  src={buildCover(post.title, false)}
+                  alt={post.title}
+                  fill
+                  className="object-cover"
+                  unoptimized
+                  priority
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent" />
+                <div className="absolute bottom-0 left-0 p-6 md:p-10 text-white">
+                   <div className="mb-4 flex flex-wrap gap-2">
+                      {post.tags && post.tags.map(tag => (
+                        <span key={tag} className="rounded-full bg-white/20 px-3 py-1 text-xs font-medium backdrop-blur-md">
+                          {tag}
+                        </span>
+                      ))}
+                   </div>
+                   <h1 className="mb-4 text-3xl font-bold leading-tight md:text-4xl lg:text-5xl">
+                     {post.title}
+                   </h1>
+                   <div className="flex items-center gap-4 text-sm font-medium text-white/90">
+                     <time dateTime={post.publishDate}>
+                       {formatDateByLocale(post.publishDate, params.lang)}
+                     </time>
+                     <span>•</span>
+                     <span>Health Tips</span>
+                   </div>
+                </div>
+              </div>
+
+              {/* Content Body */}
+              <div className="px-6 py-10 md:px-10 md:py-12">
+                <div className="prose prose-lg prose-slate max-w-none prose-headings:font-bold prose-headings:text-slate-800 prose-p:text-slate-600 prose-a:text-primary-600 hover:prose-a:text-primary-500 prose-img:rounded-2xl prose-strong:text-slate-800">
+                  <div dangerouslySetInnerHTML={{ __html: first }} />
+                  
+                  {/* In-Article Ad */}
+                  {adsEnabled && (
+                    <div className="my-10">
+                      <AdBlock 
+                        client={adClient} 
+                        slot={adSlot} 
+                        enabled={true} 
+                        format="fluid"
+                        label="Sponsored"
+                        className="mx-auto max-w-2xl bg-slate-50"
+                      />
+                    </div>
+                  )}
+                  
+                  <div dangerouslySetInnerHTML={{ __html: second }} />
+                </div>
+
+                {/* Article Footer / Share Placeholder */}
+                <div className="mt-12 border-t border-slate-100 pt-8">
+                   <p className="text-center text-sm text-slate-400">
+                     {shareLabels[params.lang] || shareLabels.en}
+                   </p>
+                   {/* Add share buttons here in future */}
+                </div>
+              </div>
+            </article>
+
+            {/* Bottom Ad (Optional) */}
+            {adsEnabled && (
+              <div className="mt-8">
+                <AdBlock 
+                  client={adClient} 
+                  slot={adSlot} 
+                  enabled={true} 
+                  format="auto" 
+                  className="bg-transparent shadow-none"
+                />
+              </div>
+            )}
+          </main>
+
+          {/* Sidebar Column */}
+          <div className="lg:col-span-4">
+            <Sidebar 
+              lang={params.lang} 
+              posts={sidebarPosts} 
+              adClient={adClient} 
+              adSlot={adSlot} 
+              adsEnabled={adsEnabled} 
+            />
+          </div>
+        </div>
       </div>
-
-      <article className="rounded-2xl border border-slate-200 bg-white p-6 shadow-sm dark:border-slate-700 dark:bg-slate-900">
-        <header className="mb-6 space-y-2">
-          <h1 className="text-2xl font-semibold">{post.title}</h1>
-          <p className="text-sm text-slate-500">
-            {formatDateByLocale(post.publishDate, params.lang)}
-          </p>
-          <p className="text-slate-600 dark:text-slate-300">
-            {post.description}
-          </p>
-        </header>
-
-        <AdBlock slot="0000000001" enabled={adsEnabled} client={adClient} />
-
-        <div
-          className="prose max-w-none dark:prose-invert"
-          dangerouslySetInnerHTML={{ __html: first }}
-        />
-
-        <AdBlock slot="0000000002" enabled={adsEnabled} client={adClient} />
-
-        {second && (
-          <div
-            className="prose max-w-none dark:prose-invert"
-            dangerouslySetInnerHTML={{ __html: second }}
-          />
-        )}
-
-        <AdBlock slot="0000000003" enabled={adsEnabled} client={adClient} />
-      </article>
 
       <script
         type="application/ld+json"
@@ -135,6 +243,6 @@ export default async function PostDetailPage({ params }) {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
       />
-    </main>
+    </div>
   );
 }
