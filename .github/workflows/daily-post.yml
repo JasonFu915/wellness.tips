@@ -25,6 +25,17 @@ jobs:
         run: |
           pip install -r scripts/requirements.txt
 
+      - name: Debug Secret Availability
+        env:
+          DASHSCOPE_API_KEY: ${{ secrets.DASHSCOPE_API_KEY }}
+        run: |
+          if [ -z "$DASHSCOPE_API_KEY" ]; then
+            echo "::error::Secret DASHSCOPE_API_KEY is empty or not accessible!"
+            exit 1
+          else
+            echo "Secret DASHSCOPE_API_KEY is present (length: ${#DASHSCOPE_API_KEY})"
+          fi
+
       - name: Generate Daily Tip
         env:
           DASHSCOPE_API_KEY: ${{ secrets.DASHSCOPE_API_KEY }}

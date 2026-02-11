@@ -6,11 +6,13 @@ from slugify import slugify
 import re
 
 # Initialize DashScope
-dashscope.api_key = os.getenv('DASHSCOPE_API_KEY')
-
-if not dashscope.api_key:
-    print("Error: DASHSCOPE_API_KEY environment variable is not set.")
+api_key = os.getenv('DASHSCOPE_API_KEY')
+if not api_key:
+    print("::error::DASHSCOPE_API_KEY environment variable is not set. Please check your GitHub Repository Secrets.")
     exit(1)
+
+dashscope.api_key = api_key
+print(f"DashScope API Key found (starts with: {api_key[:4]}***)")
 
 # List of topics to rotate through
 TOPICS = [
@@ -103,8 +105,15 @@ tags: ["Daily Tip", "Health"]
         print(json_data)
 
 if __name__ == "__main__":
-    topic = random.choice(TOPICS)
-    print(f"Generating content for topic: {topic}")
-    json_result = generate_content(topic)
-    if json_result:
-        save_files(json_result)
+    try:
+        topic = random.choice(TOPICS)
+        print(f"Generating content for topic: {topic}")
+        json_result = generate_content(topic)
+        if json_result:
+            save_files(json_result)
+        else:
+            print("::error::Failed to generate content (API returned None). Check logs for details.")
+            exit(1)
+    except Exception as e:
+        print(f"::error::Unexpected script error: {str(e)}")
+        exit(1)
