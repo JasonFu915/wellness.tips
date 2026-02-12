@@ -1,3 +1,4 @@
+import Link from "next/link";
 import FeaturedPosts from "../../components/FeaturedPosts";
 import SearchBox from "../../components/SearchBox";
 import { getAllLanguages, getAllPosts } from "../../lib/posts";
@@ -8,35 +9,39 @@ const labels = {
     subhead: "Science-backed tips for better sleep, nutrition, and wellbeing.",
     recommended: "Recommended For You",
     searchPlaceholder: "Search health tips...",
-    dailyUpdates: "Daily Updates"
+    viewAll: "View All Tips"
   },
   zh: {
     headline: "健康小贴士",
     subhead: "每日科学健康建议，涵盖睡眠、饮食与心理。",
     recommended: "精选推荐",
     searchPlaceholder: "搜索健康贴士...",
-    dailyUpdates: "每日更新"
+    dailyUpdates: "每日更新",
+    viewAll: "查看所有贴士"
   },
   es: {
     headline: "Consejos de Salud",
     subhead: "Consejos diarios sobre sueño, nutrición y bienestar.",
     recommended: "Recomendado",
     searchPlaceholder: "Buscar consejos...",
-    dailyUpdates: "Actualizaciones Diarias"
+    dailyUpdates: "Actualizaciones Diarias",
+    viewAll: "Ver Todos los Consejos"
   },
   fr: {
     headline: "Conseils Santé",
     subhead: "Conseils quotidiens sur le sommeil, la nutrition et le bien-être.",
     recommended: "Recommandé",
     searchPlaceholder: "Rechercher...",
-    dailyUpdates: "Mises à jour Quotidiennes"
+    dailyUpdates: "Mises à jour Quotidiennes",
+    viewAll: "Voir Tous les Conseils"
   },
   de: {
     headline: "Gesundheitstipps",
     subhead: "Tägliche Tipps zu Schlaf, Ernährung und Wohlbefinden.",
     recommended: "Empfohlen",
     searchPlaceholder: "Suchen...",
-    dailyUpdates: "Tägliche Updates"
+    dailyUpdates: "Tägliche Updates",
+    viewAll: "Alle Tipps Ansehen"
   }
 };
 
@@ -84,7 +89,7 @@ export default function LangHomePage({ params }) {
         <div className="container relative mx-auto px-4 text-center">
           <div className="mx-auto mb-6 inline-flex items-center rounded-full border border-primary-100 bg-primary-50 px-3 py-1 text-sm text-primary-700">
             <span className="mr-2 flex h-2 w-2 rounded-full bg-primary-500"></span>
-            {text.dailyUpdates} <span className="ml-2 text-xs opacity-50">v2.1</span>
+            {text.dailyUpdates} 
           </div>
           <h1 className="mb-6 text-4xl font-extrabold tracking-tight text-slate-900 sm:text-5xl md:text-6xl">
             {text.headline}
@@ -105,6 +110,19 @@ export default function LangHomePage({ params }) {
           <div className="h-px flex-1 bg-slate-200"></div>
         </div>
         <FeaturedPosts posts={featured} lang={params.lang} />
+        
+        {/* View All Button */}
+        <div className="mt-12 flex justify-center">
+          <Link 
+            href={`/${params.lang}/archive`}
+            className="group inline-flex items-center gap-2 rounded-full border border-slate-200 bg-white px-8 py-3 text-base font-medium text-slate-700 shadow-sm transition-all hover:border-primary-200 hover:bg-primary-50 hover:text-primary-700"
+          >
+            {text.viewAll}
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" className="h-5 w-5 transition-transform group-hover:translate-x-1">
+              <path fillRule="evenodd" d="M3 10a.75.75 0 01.75-.75h10.638L10.23 5.29a.75.75 0 111.04-1.08l5.5 5.25a.75.75 0 010 1.08l-5.5 5.25a.75.75 0 11-1.04-1.08l4.158-3.96H3.75A.75.75 0 013 10z" clipRule="evenodd" />
+            </svg>
+          </Link>
+        </div>
       </section>
     </div>
   );

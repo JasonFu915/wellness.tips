@@ -3,6 +3,7 @@ title: "Cómo dejar de pensar demasiado por la noche"
 date: "2026-02-12"
 description: "Consejos respaldados por la ciencia para calmar tu mente y dormir mejor esta noche."
 tags: ["Daily Tip", "Health"]
+coverImage: "https://images.unsplash.com/photo-1549080876-457984b78535?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w4NzMyOTR8MHwxfHNlYXJjaHwxfHxIb3clMjB0byUyMFN0b3AlMjBPdmVydGhpbmtpbmclMjBhdCUyME5pZ2h0fGVufDB8MHx8fDE3NzA5MTA3NzV8MA&ixlib=rb-4.1.0&q=80&w=1080"
 ---
 
 **¿Crees que necesitas 8 horas? No siempre es así.** Muchas personas luchan con el pensamiento excesivo por la noche, lo que puede interrumpir el sueño y dejarte agotada al día siguiente. Pero la ciencia muestra que **tu mentalidad importa más de lo que crees**—y hay formas simples y efectivas de tomar el control.

@@ -3,6 +3,7 @@ title: "How to Stop Overthinking at Night"
 date: "2026-02-12"
 description: "Science-backed tips to calm your mind and sleep better tonight."
 tags: ["Daily Tip", "Health"]
+coverImage: "https://images.unsplash.com/photo-1549080876-457984b78535?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w4NzMyOTR8MHwxfHNlYXJjaHwxfHxIb3clMjB0byUyMFN0b3AlMjBPdmVydGhpbmtpbmclMjBhdCUyME5pZ2h0fGVufDB8MHx8fDE3NzA5MTA3NzV8MA&ixlib=rb-4.1.0&q=80&w=1080"
 ---
 
 **Think you need 8 hours? Not necessarily.** Many people struggle with overthinking at night, which can disrupt sleep and leave you feeling exhausted the next day. But science shows that **your mindset matters more than you think**—and there are simple, effective ways to take control.

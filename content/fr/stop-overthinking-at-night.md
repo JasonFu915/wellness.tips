@@ -3,6 +3,7 @@ title: "Comment arrêter de réfléchir trop le soir"
 date: "2026-02-12"
 description: "Des conseils basés sur la science pour calmer votre esprit et dormir mieux cette nuit."
 tags: ["Daily Tip", "Health"]
+coverImage: "https://images.unsplash.com/photo-1549080876-457984b78535?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w4NzMyOTR8MHwxfHNlYXJjaHwxfHxIb3clMjB0byUyMFN0b3AlMjBPdmVydGhpbmtpbmclMjBhdCUyME5pZ2h0fGVufDB8MHx8fDE3NzA5MTA3NzV8MA&ixlib=rb-4.1.0&q=80&w=1080"
 ---
 
 **Pensez-vous avoir besoin de 8 heures ? Pas toujours.** Beaucoup de personnes souffrent d'une surcharge mentale la nuit, ce qui peut perturber le sommeil et vous laisser épuisée le lendemain. Mais la science montre que **votre état d'esprit compte plus que vous ne le pensez** — et il existe des moyens simples et efficaces pour prendre le contrôle.

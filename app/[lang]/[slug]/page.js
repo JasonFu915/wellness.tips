@@ -76,7 +76,8 @@ export default async function PostDetailPage({ params }) {
     .filter(p => p.slug !== params.slug)
     .map(p => ({
       slug: p.slug,
-      title: p.title
+      title: p.title,
+      coverImage: p.coverImage
     }));
 
   const articleSchema = {

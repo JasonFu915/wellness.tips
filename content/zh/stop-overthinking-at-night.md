@@ -3,6 +3,7 @@ title: "如何在夜晚停止过度思考"
 date: "2026-02-12"
 description: "科学支持的技巧，帮助你今晚平静思绪、改善睡眠。"
 tags: ["Daily Tip", "Health"]
+coverImage: "https://images.unsplash.com/photo-1549080876-457984b78535?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w4NzMyOTR8MHwxfHNlYXJjaHwxfHxIb3clMjB0byUyMFN0b3AlMjBPdmVydGhpbmtpbmclMjBhdCUyME5pZ2h0fGVufDB8MHx8fDE3NzA5MTA3NzV8MA&ixlib=rb-4.1.0&q=80&w=1080"
 ---
 
 **你以为需要8小时睡眠？不一定。** 很多人在晚上会过度思考，这会干扰睡眠，让你第二天感到疲惫。但科学研究表明，**你的思维比你想象的更重要**——而且有简单有效的方法可以掌控它。

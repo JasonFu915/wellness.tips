@@ -4,15 +4,40 @@ import { buildCover } from "../lib/utils";
 import AdBlock from "./AdBlock";
 
 export default function Sidebar({ lang, posts, adClient, adSlot, adsEnabled }) {
-  // Use first 5 posts as "Recent/Popular" for now
-  const recentPosts = posts.slice(0, 5);
+  // Use first 8 posts as "Recent/Popular" for now
+  const recentPosts = posts.slice(0, 8);
 
   const labels = {
-    en: { recent: "Recent Tips", ad: "Advertisement" },
-    zh: { recent: "最新贴士", ad: "广告" },
-    es: { recent: "Consejos Recientes", ad: "Publicidad" },
-    fr: { recent: "Conseils Récents", ad: "Publicité" },
-    de: { recent: "Neueste Tipps", ad: "Anzeige" }
+    en: { 
+      recent: "Recent Tips", 
+      ad: "Advertisement",
+      aboutTitle: "Daily Health Tips",
+      aboutDesc: "Science-backed tips for better sleep, nutrition, and mental wellbeing. Small habits, big changes."
+    },
+    zh: { 
+      recent: "最新贴士", 
+      ad: "广告",
+      aboutTitle: "每日健康贴士",
+      aboutDesc: "基于科学的睡眠、营养和心理健康贴士。小习惯，大改变。"
+    },
+    es: { 
+      recent: "Consejos Recientes", 
+      ad: "Publicidad",
+      aboutTitle: "Consejos Diarios de Salud",
+      aboutDesc: "Consejos respaldados por la ciencia para dormir mejor, nutrición y bienestar mental. Pequeños hábitos, grandes cambios."
+    },
+    fr: { 
+      recent: "Conseils Récents", 
+      ad: "Publicité",
+      aboutTitle: "Conseils Santé Quotidiens",
+      aboutDesc: "Conseils scientifiques pour un meilleur sommeil, une meilleure nutrition et un bien-être mental. Petites habitudes, grands changements."
+    },
+    de: { 
+      recent: "Neueste Tipps", 
+      ad: "Anzeige",
+      aboutTitle: "Tägliche Gesundheitstipps",
+      aboutDesc: "Wissenschaftlich fundierte Tipps für besseren Schlaf, Ernährung und geistiges Wohlbefinden. Kleine Gewohnheiten, große Veränderungen."
+    }
   };
 
   const text = labels[lang] || labels.en;
@@ -27,10 +52,10 @@ export default function Sidebar({ lang, posts, adClient, adSlot, adsEnabled }) {
               <path fillRule="evenodd" d="M9 4.5a.75.75 0 01.721.544l.813 2.846a3.75 3.75 0 002.576 2.576l2.846.813a.75.75 0 010 1.442l-2.846.813a3.75 3.75 0 00-2.576 2.576l-.813 2.846a.75.75 0 01-1.442 0l-.813-2.846a3.75 3.75 0 00-2.576-2.576l-2.846-.813a.75.75 0 010-1.442l2.846-.813a3.75 3.75 0 002.576-2.576l.813-2.846A.75.75 0 019 4.5zM18 1.5a.75.75 0 01.728.568l.258 1.036c.236.94.97 1.674 1.91 1.91l1.036.258a.75.75 0 010 1.456l-1.036.258c-.94.236-1.674.97-1.91 1.91l-.258 1.036a.75.75 0 01-1.456 0l-.258-1.036a2.625 2.625 0 00-1.91-1.91l-1.036-.258a.75.75 0 010-1.456l1.036-.258a2.625 2.625 0 001.91-1.91l.258-1.036A.75.75 0 0118 1.5z" clipRule="evenodd" />
             </svg>
           </div>
-          <h3 className="text-lg font-bold text-slate-800">Daily Health Tips</h3>
+          <h3 className="text-lg font-bold text-slate-800">{text.aboutTitle}</h3>
         </div>
         <p className="text-sm leading-relaxed text-slate-500">
-          Science-backed tips for better sleep, nutrition, and mental wellbeing. Small habits, big changes.
+          {text.aboutDesc}
         </p>
       </div>
 

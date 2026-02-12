@@ -3,6 +3,7 @@ title: "Cenas familiares sin pantallas: Cómo empezar"
 date: "2026-02-12"
 description: "Aprende cómo crear momentos significativos en familia sin pantallas."
 tags: ["Daily Tip", "Health"]
+coverImage: "https://images.unsplash.com/photo-1752652014966-932db48f6207?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w4NzMyOTR8MHwxfHNlYXJjaHwxfHxTY3JlZW4tRnJlZSUyMEZhbWlseSUyMERpbm5lcnMlM0ElMjBIb3clMjB0byUyMFN0YXJ0fGVufDB8MHx8fDE3NzA5MTA3NzJ8MA&ixlib=rb-4.1.0&q=80&w=1080"
 ---
 
 **¿Por qué ver pantallas durante las comidas?**

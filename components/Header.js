@@ -17,6 +17,8 @@ export default function Header({ lang, posts }) {
           </span>
         </Link>
 
+
+
         <div className="flex items-center gap-4">
           <div className="hidden md:block">
             <SearchBox posts={posts} lang={lang} variant="header" />

@@ -3,6 +3,7 @@ title: "无屏幕的家庭晚餐：如何开始"
 date: "2026-02-12"
 description: "学习如何在没有屏幕的情况下创造有意义的家庭时光。"
 tags: ["Daily Tip", "Health"]
+coverImage: "https://images.unsplash.com/photo-1752652014966-932db48f6207?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w4NzMyOTR8MHwxfHNlYXJjaHwxfHxTY3JlZW4tRnJlZSUyMEZhbWlseSUyMERpbm5lcnMlM0ElMjBIb3clMjB0byUyMFN0YXJ0fGVufDB8MHx8fDE3NzA5MTA3NzJ8MA&ixlib=rb-4.1.0&q=80&w=1080"
 ---
 
 **为什么晚餐时要看屏幕？**

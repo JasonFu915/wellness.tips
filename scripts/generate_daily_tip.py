@@ -5,6 +5,7 @@ import dashscope
 from slugify import slugify
 import re
 import requests
+import json
 
 # Initialize DashScope
 api_key = os.getenv('DASHSCOPE_API_KEY')
@@ -15,42 +16,80 @@ if not api_key:
 dashscope.api_key = api_key
 print(f"DashScope API Key found (starts with: {api_key[:4]}***)")
 
-# List of topics to rotate through
-TOPICS = [
-    # === 原有主题（保留）===
-    "Better Sleep Habits", "Hydration Benefits", "Mindfulness Meditation", 
-    "Healthy Snacking", "Morning Stretching", "Digital Detox", 
-    "Posture Correction", "Eye Health", "Stress Management", 
-    "Balanced Breakfast", "Walking Benefits", "Sugar Reduction",
-    "Immune System Boost", "Vitamin D Importance", "Gut Health",
+# Categories for rotating topics - Expanded to 35+ categories for long-term variety
+CATEGORIES = [
+    # === Physical Health & Fitness ===
+    "Sleep Science", "Morning Routines", "Walking & Steps", "Home Workouts",
+    "Stretching & Flexibility", "Posture Correction", "Joint Health",
+    "Cardiovascular Health", "Strength Training Basics", "Recovery & Rest",
 
-    # === 新增：心理健康 ===
-    "Emotional Resilience Techniques",
-    "How to Stop Overthinking at Night",
-    "Gratitude Journaling for Beginners",
+    # === Nutrition & Diet ===
+    "Gut Health & Probiotics", "Hydration Science", "Sugar Reduction",
+    "Plant-Based Nutrition", "Healthy Snacking", "Meal Prep & Planning",
+    "Superfoods & Nutrients", "Digestion Optimization", "Mindful Eating",
+    "Caffeine & Energy",
 
-    # === 新增：深度睡眠 ===
-    "Cooling Your Bedroom for Deeper Sleep",
-    "How Caffeine Half-Life Affects Sleep",
+    # === Mental & Emotional Well-being ===
+    "Stress Management", "Mindfulness & Meditation", "Anxiety Reduction",
+    "Focus & Productivity", "Digital Detox", "Emotional Resilience",
+    "Gratitude Practices", "Social Connection", "Brain Health",
+    "Mood Boosting Habits",
 
-    # === 新增：营养科学 ===
-    "Protein Timing for Energy Stability",
-    "Fiber-Rich Foods That Reduce Bloating",
-    "Eating for Stable Blood Sugar",
-
-    # === 新增：微运动 ===
-    "Desk Yoga for Neck and Shoulder Relief",
-    "2-Minute Post-Lunch Walks That Boost Digestion",
-
-    # === 新增：自然疗法 ===
-    "Cold Shower Benefits (Backed by Science)",
-    "Sunlight Exposure for Circadian Rhythm",
-
-    # === 新增：家庭健康 ===
-    "Screen-Free Family Dinners: How to Start"
+    # === Lifestyle & Environment ===
+    "Eye Health & Screen Time", "Ergonomics (Work from Home)", "Circadian Rhythms",
+    "Healthy Aging", "Skin Health", "Immune System Support",
+    "Cold/Heat Therapy", "Breathing Techniques", "Nature Therapy",
+    "Family Health Habits"
 ]
 
 LANGUAGES = ['en', 'zh', 'es', 'fr', 'de']
+
+def get_existing_slugs():
+    """
+    Scan content/en directory to find all existing article slugs.
+    """
+    existing_slugs = []
+    content_dir = os.path.join('content', 'en')
+    if os.path.exists(content_dir):
+        for filename in os.listdir(content_dir):
+            if filename.endswith('.md'):
+                existing_slugs.append(filename.replace('.md', ''))
+    return existing_slugs
+
+def brainstorm_topic(category, existing_slugs):
+    """
+    Use AI to generate a unique, specific topic based on category,
+    avoiding existing slugs.
+    """
+    # Take a sample of existing slugs to show the model what NOT to generate
+    # We can't pass all if there are too many, but for now 50 is fine.
+    sample_slugs = random.sample(existing_slugs, min(len(existing_slugs), 50))
+    
+    prompt = f"""
+    You are a professional health editor. 
+    Your task: Propose 1 UNIQUE, SPECIFIC, and SCIENTIFICALLY ACCURATE health article title about "{category}".
+    
+    Constraints:
+    1. The title must be catchy but credible (no clickbait).
+    2. It must be distinct from these existing articles: {', '.join(sample_slugs)}
+    3. Focus on a specific angle (e.g., instead of "Drink Water", suggest "Why Warm Water Boosts Digestion").
+    4. Return ONLY the English title string. No quotes, no explanations.
+    """
+    
+    try:
+        response = dashscope.Generation.call(
+            model=dashscope.Generation.Models.qwen_turbo,
+            messages=[{'role': 'user', 'content': prompt}],
+            result_format='message'
+        )
+        if response.status_code == 200:
+            return response.output.choices[0].message.content.strip()
+        else:
+            print(f"Brainstorming Error: {response.code} - {response.message}")
+            return None
+    except Exception as e:
+        print(f"Brainstorming Exception: {e}")
+        return None
 
 def get_unsplash_image(keyword):
     """
@@ -99,9 +138,10 @@ def generate_content(topic):
 
     Requirements:
     1. **Tone & Style**:
-       - Encouraging, empathetic, and non-judgmental
+       - Professional yet accessible (like a top-tier health blog)
        - Scientific but jargon-free (explain terms like "melatonin" or "hydration" in simple analogies)
        - Written in second person ("you") to build connection
+       - **Cite 1-2 specific studies** (e.g., "A 2023 study in Nature found...") to boost credibility.
 
     2. **Content Structure**:
        - Start with a relatable problem or myth (e.g., "Think you need 8 hours? Not necessarily.")
@@ -146,8 +186,6 @@ def generate_content(topic):
         print(f"Exception: {e}")
         return None
 
-import json
-
 def save_files(json_data):
     try:
         data = json.loads(json_data)
@@ -189,14 +227,32 @@ coverImage: "{cover_image}"
 
 if __name__ == "__main__":
     try:
-        topic = random.choice(TOPICS)
-        print(f"Generating content for topic: {topic}")
-        json_result = generate_content(topic)
-        if json_result:
-            save_files(json_result)
-        else:
-            print("::error::Failed to generate content (API returned None). Check logs for details.")
-            exit(1)
+        # Generate 2 articles per run
+        articles_to_generate = 2
+        existing_slugs = get_existing_slugs()
+        
+        # Ensure we pick different categories for the 2 articles
+        chosen_categories = random.sample(CATEGORIES, articles_to_generate)
+        
+        for i, category in enumerate(chosen_categories):
+            print(f"--- Generating Article {i+1}/{articles_to_generate} [Category: {category}] ---")
+            
+            # Step 1: Brainstorm a unique topic
+            topic = brainstorm_topic(category, existing_slugs)
+            if not topic:
+                print(f"::error::Failed to brainstorm topic for {category}. Skipping.")
+                continue
+                
+            print(f"Brainstormed Topic: {topic}")
+            
+            # Step 2: Generate Content
+            json_result = generate_content(topic)
+            if json_result:
+                save_files(json_result)
+            else:
+                print("::error::Failed to generate content (API returned None). Check logs for details.")
+                # Don't exit, try the next one
+                
     except Exception as e:
-        print(f"::error::Unexpected script error: {str(e)}")
+        print(f"Fatal Error: {e}")
         exit(1)

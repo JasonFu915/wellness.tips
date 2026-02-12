@@ -3,6 +3,7 @@ title: "Wie man aufhört, nachts zu sehr zu denken"
 date: "2026-02-12"
 description: "Wissenschaftlich fundierte Tipps, um heute Abend deine Gedanken zu beruhigen und besser zu schlafen."
 tags: ["Daily Tip", "Health"]
+coverImage: "https://images.unsplash.com/photo-1549080876-457984b78535?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w4NzMyOTR8MHwxfHNlYXJjaHwxfHxIb3clMjB0byUyMFN0b3AlMjBPdmVydGhpbmtpbmclMjBhdCUyME5pZ2h0fGVufDB8MHx8fDE3NzA5MTA3NzV8MA&ixlib=rb-4.1.0&q=80&w=1080"
 ---
 
 **Denkst du, du brauchst 8 Stunden Schlaf? Nicht unbedingt.** Viele Menschen kämpfen nachts mit übermäßigem Denken, was den Schlaf stören und dich am nächsten Tag erschöpft lassen kann. Aber die Wissenschaft zeigt, dass **dein Geist mehr Einfluss hat, als du denkst** — und es gibt einfache, effektive Wege, das zu ändern.
