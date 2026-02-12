@@ -9,6 +9,7 @@ const labels = {
     subhead: "Science-backed tips for better sleep, nutrition, and wellbeing.",
     recommended: "Recommended For You",
     searchPlaceholder: "Search health tips...",
+    dailyUpdates: "Daily Updates",
     viewAll: "View All Tips"
   },
   zh: {
