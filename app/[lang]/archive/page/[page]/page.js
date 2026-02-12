@@ -1,6 +1,6 @@
-import FeaturedPosts from "../../../../components/FeaturedPosts";
-import Pagination from "../../../../components/Pagination";
-import { getAllLanguages, getAllPosts, getPaginatedPosts, getPostsPerPage } from "../../../../lib/posts";
+import FeaturedPosts from "../../../../../components/FeaturedPosts";
+import Pagination from "../../../../../components/Pagination";
+import { getAllLanguages, getAllPosts, getPaginatedPosts, getPostsPerPage } from "../../../../../lib/posts";
 import { notFound } from "next/navigation";
 
 const labels = {
