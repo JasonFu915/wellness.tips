@@ -27,8 +27,8 @@ LANGUAGES = ['en', 'zh', 'es', 'fr', 'de']
 
 def generate_content(topic):
     prompt = f"""
-    You are a professional health writer. Create a short daily health tip article about "{topic}".
-    
+    You are a health communication expert writing for a global audience. Create a practical, science-backed health tip article about "{topic}" that empowers readers to take immediate action.
+
     Output Format: JSON with the following structure for 5 languages (en, zh, es, fr, de):
     {{
       "slug": "english-slug-based-on-title",
@@ -38,13 +38,33 @@ def generate_content(topic):
       "fr": {{ "title": "...", "description": "...", "content": "Markdown content..." }},
       "de": {{ "title": "...", "description": "...", "content": "Markdown content..." }}
     }}
-    
+
     Requirements:
-    1. Content should be encouraging, scientific but easy to understand.
-    2. Length: about 300-500 words per language.
-    3. Use Markdown formatting (headings, bullet points).
-    4. Ensure the slug is URL-friendly and in English.
-    5. JSON must be valid.
+    1. **Tone & Style**:
+       - Encouraging, empathetic, and non-judgmental
+       - Scientific but jargon-free (explain terms like "melatonin" or "hydration" in simple analogies)
+       - Written in second person ("you") to build connection
+
+    2. **Content Structure**:
+       - Start with a relatable problem or myth (e.g., "Think you need 8 hours? Not necessarily.")
+       - Include 1–2 key scientific insights from reputable sources (e.g., NIH, WHO, Mayo Clinic)
+       - Provide 3–5 actionable steps (use bullet points)
+       - End with an empowering takeaway ("Small changes add up!")
+
+    3. **Length & Format**:
+       - 300–500 words per language
+       - Use Markdown: H2/H3 headings, bullet points, bold for key tips, blockquotes for warnings
+       - Avoid fluff—every sentence should deliver value
+
+    4. **User Value Focus**:
+       - Answer: “What can the reader DO today?”
+       - Address common barriers (e.g., “No time? Try this 60-second version”)
+       - Include one surprising fact or counterintuitive insight
+
+    5. **Technical Requirements**:
+       - Generate a URL-friendly English slug (e.g., `sleep-better-without-pills`)
+       - Output as valid JSON
+       - `description`: ≤160 characters, compelling meta description for SEO
     """
     
     try:
