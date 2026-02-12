@@ -3,6 +3,7 @@ title: "Renforcez votre résilience émotionnelle : 5 techniques prouvées par l
 date: "2026-02-12"
 description: "Découvrez des méthodes pratiques et scientifiquement éprouvées pour améliorer votre résilience émotionnelle et gérer le stress plus efficacement."
 tags: ["Daily Tip", "Health"]
+coverImage: "https://images.unsplash.com/photo-1546440765-e7e3c881b5fe?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w4NzMyOTR8MHwxfHNlYXJjaHwxfHxCdWlsZCUyMEVtb3Rpb25hbCUyMFJlc2lsaWVuY2UlM0ElMjA1JTIwU2NpZW5jZS1CYWNrZWQlMjBUZWNobmlxdWVzJTIwWW91JTIwQ2FuJTIwVHJ5JTIwVG9kYXl8ZW58MHwwfHx8MTc3MDkwOTMwNHww&ixlib=rb-4.1.0&q=80&w=1080"
 ---
 
 **Pensez-vous qu’il faut être fort tout le temps ? Pas nécessairement.** La résilience émotionnelle ne consiste pas à réprimer vos émotions, mais à les gérer intelligemment.

@@ -3,6 +3,7 @@ title: "The Power of a Balanced Breakfast"
 date: "2026-02-11"
 description: "Discover how a balanced breakfast can boost your energy, improve focus, and support long-term health."
 tags: ["Daily Tip", "Health"]
+coverImage: "https://images.unsplash.com/photo-1627024522062-423243235d50?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w4NzMyOTR8MHwxfHNlYXJjaHwxfHxUaGUlMjBQb3dlciUyMG9mJTIwYSUyMEJhbGFuY2VkJTIwQnJlYWtmYXN0fGVufDB8MHx8fDE3NzA5MDkyOTV8MA&ixlib=rb-4.1.0&q=80&w=1080"
 ---
 
 ## Why a Balanced Breakfast Matters

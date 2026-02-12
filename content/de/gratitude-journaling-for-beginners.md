@@ -3,6 +3,7 @@ title: "Gedanken über Dankbarkeit für Anfänger: Ein einfacher Weg, Ihr Wohlbe
 date: "2026-02-12"
 description: "Beginnen Sie heute mit diesem wissenschaftlich fundierten Guide zum Dankbarkeitsjournal."
 tags: ["Daily Tip", "Health"]
+coverImage: "https://images.unsplash.com/photo-1657879005659-e0063bf20f42?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w4NzMyOTR8MHwxfHNlYXJjaHwxfHxHcmF0aXR1ZGUlMjBKb3VybmFsaW5nJTIwZm9yJTIwQmVnaW5uZXJzJTNBJTIwQSUyMFNpbXBsZSUyMFdheSUyMHRvJTIwQm9vc3QlMjBZb3VyJTIwV2VsbC1CZWluZ3xlbnwwfDB8fHwxNzcwOTA5MzEwfDA&ixlib=rb-4.1.0&q=80&w=1080"
 ---
 
 **Fühlen Sie sich überfordert? Sie sind nicht allein.** Viele Menschen denken, dass sie perfekt sein oder viel haben müssen, um dankbar zu sein, aber das ist nicht wahr. Dankbarkeit benötigt keine großen Gesten – sie beginnt mit kleinen Momenten im Alltag.

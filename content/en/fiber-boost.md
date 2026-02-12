@@ -4,6 +4,7 @@ description: "Easy food swaps that improve digestion and keep you full."
 publishDate: "2026-02-02"
 tags: ["nutrition", "fiber", "digestion"]
 lang: "en"
+coverImage: "https://images.unsplash.com/photo-1553531580-8f1950e53700?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w4NzMyOTR8MHwxfHNlYXJjaHwxfHxCb29zdCUyMFlvdXIlMjBGaWJlciUyMEludGFrZSUyMFdpdGhvdXQlMjBGZWVsaW5nJTIwQmxvYXRlZHxlbnwwfDB8fHwxNzcwOTA5MzA4fDA&ixlib=rb-4.1.0&q=80&w=1080"
 ---
 
 ![Fiber illustration](/images/en/cover.svg)

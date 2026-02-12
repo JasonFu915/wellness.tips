@@ -3,6 +3,7 @@ title: "Journal de gratitude pour les débutants : une méthode simple pour amé
 date: "2026-02-12"
 description: "Commencez à vous sentir mieux dès aujourd'hui avec ce guide scientifique sur le journal de gratitude."
 tags: ["Daily Tip", "Health"]
+coverImage: "https://images.unsplash.com/photo-1657879005659-e0063bf20f42?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w4NzMyOTR8MHwxfHNlYXJjaHwxfHxHcmF0aXR1ZGUlMjBKb3VybmFsaW5nJTIwZm9yJTIwQmVnaW5uZXJzJTNBJTIwQSUyMFNpbXBsZSUyMFdheSUyMHRvJTIwQm9vc3QlMjBZb3VyJTIwV2VsbC1CZWluZ3xlbnwwfDB8fHwxNzcwOTA5MzEwfDA&ixlib=rb-4.1.0&q=80&w=1080"
 ---
 
 **Vous vous sentez submergé ? Vous n'êtes pas seul.** Beaucoup de gens pensent qu'ils doivent être parfaits ou avoir beaucoup à être reconnaissants, mais ce n'est pas vrai. La gratitude ne nécessite pas de gestes grands - elle commence par des petits moments quotidiens.

@@ -3,6 +3,7 @@ title: "步行的好处：迈向更健康生活的简单步骤"
 date: "2026-02-12"
 description: "了解步行的众多健康益处，以及它如何改善你的生活。"
 tags: ["Daily Tip", "Health"]
+coverImage: "https://images.unsplash.com/photo-1752659985958-cb2bc9e5875e?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w4NzMyOTR8MHwxfHNlYXJjaHwxfHxUaGUlMjBQb3dlciUyMG9mJTIwV2Fsa2luZyUzQSUyMFNpbXBsZSUyMFN0ZXBzJTIwdG8lMjBCZXR0ZXIlMjBIZWFsdGh8ZW58MHwwfHx8MTc3MDkwOTMyM3ww&ixlib=rb-4.1.0&q=80&w=1080"
 ---
 
 # 步行的好处：迈向更健康生活的简单步骤

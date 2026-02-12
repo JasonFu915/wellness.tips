@@ -4,6 +4,7 @@ import datetime
 import dashscope
 from slugify import slugify
 import re
+import requests
 
 # Initialize DashScope
 api_key = os.getenv('DASHSCOPE_API_KEY')
@@ -50,6 +51,37 @@ TOPICS = [
 ]
 
 LANGUAGES = ['en', 'zh', 'es', 'fr', 'de']
+
+def get_unsplash_image(keyword):
+    """
+    Fetch a relevant image from Unsplash API.
+    Requires UNSPLASH_ACCESS_KEY env var.
+    Fallback to a default placeholder if failed.
+    """
+    access_key = os.environ.get('UNSPLASH_ACCESS_KEY')
+    if not access_key:
+        print("::warning::UNSPLASH_ACCESS_KEY not found. Using default placeholder.")
+        return ""
+
+    url = "https://api.unsplash.com/search/photos"
+    params = {
+        "query": keyword,
+        "per_page": 1,
+        "orientation": "landscape",
+        "client_id": access_key
+    }
+    
+    try:
+        response = requests.get(url, params=params, timeout=10)
+        if response.status_code == 200:
+            data = response.json()
+            if data['results']:
+                # Return the regular size URL
+                return data['results'][0]['urls']['regular']
+    except Exception as e:
+        print(f"Unsplash API Error: {e}")
+    
+    return ""
 
 def generate_content(topic):
     prompt = f"""
@@ -125,14 +157,19 @@ def save_files(json_data):
             
         today = datetime.date.today().isoformat()
         
+        # Fetch cover image based on English title/keywords
+        cover_image = get_unsplash_image(data['en']['title'])
+        print(f"Selected cover image: {cover_image}")
+        
         for lang in LANGUAGES:
             if lang in data:
                 content = data[lang]
                 file_content = f"""---
 title: "{content['title']}"
-date: "{today}"
+publishDate: "{today}"
 description: "{content['description']}"
 tags: ["Daily Tip", "Health"]
+coverImage: "{cover_image}"
 ---
 
 {content['content']}

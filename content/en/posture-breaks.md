@@ -4,6 +4,7 @@ description: "Small movements that reduce neck and back tension during long work
 publishDate: "2026-02-04"
 tags: ["posture", "desk", "mobility"]
 lang: "en"
+coverImage: "https://images.unsplash.com/photo-1674471361339-2e1e1dbd3e73?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w4NzMyOTR8MHwxfHNlYXJjaHwxfHxQb3N0dXJlJTIwQnJlYWtzJTIwZm9yJTIwRGVzayUyMFdvcmtlcnN8ZW58MHwwfHx8MTc3MDkwOTMxOHww&ixlib=rb-4.1.0&q=80&w=1080"
 ---
 
 ![Posture illustration](/images/en/cover.svg)

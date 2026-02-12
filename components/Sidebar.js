@@ -56,7 +56,7 @@ export default function Sidebar({ lang, posts, adClient, adSlot, adsEnabled }) {
               <Link key={post.slug} href={`/${lang}/${post.slug}`} className="group flex gap-3">
                 <div className="relative h-16 w-16 flex-shrink-0 overflow-hidden rounded-lg bg-slate-100">
                   <Image
-                    src={buildCover(post.title)}
+                    src={post.coverImage || buildCover(post.title)}
                     alt={post.title}
                     fill
                     className="object-cover transition-transform duration-300 group-hover:scale-110"

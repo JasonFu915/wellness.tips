@@ -3,6 +3,7 @@ title: "初学者的感恩日记：提升幸福感的简单方法"
 date: "2026-02-12"
 description: "今天就开始这个有科学依据的感恩日记指南，感受更好的自己。"
 tags: ["Daily Tip", "Health"]
+coverImage: "https://images.unsplash.com/photo-1657879005659-e0063bf20f42?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w4NzMyOTR8MHwxfHNlYXJjaHwxfHxHcmF0aXR1ZGUlMjBKb3VybmFsaW5nJTIwZm9yJTIwQmVnaW5uZXJzJTNBJTIwQSUyMFNpbXBsZSUyMFdheSUyMHRvJTIwQm9vc3QlMjBZb3VyJTIwV2VsbC1CZWluZ3xlbnwwfDB8fHwxNzcwOTA5MzEwfDA&ixlib=rb-4.1.0&q=80&w=1080"
 ---
 
 **感到压力大？你不是一个人。** 很多人认为需要完美或有很多值得感激的事情，但事实并非如此。感恩不需要宏大的举动——它从每天的小瞬间开始。

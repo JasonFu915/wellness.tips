@@ -3,6 +3,7 @@ title: "Stärken Sie Ihre emotionale Resilienz: 5 wissenschaftlich fundierte Tec
 date: "2026-02-12"
 description: "Lernen Sie praktische, wissenschaftlich fundierte Methoden kennen, um Ihre emotionale Resilienz zu verbessern und Stress besser zu bewältigen."
 tags: ["Daily Tip", "Health"]
+coverImage: "https://images.unsplash.com/photo-1546440765-e7e3c881b5fe?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w4NzMyOTR8MHwxfHNlYXJjaHwxfHxCdWlsZCUyMEVtb3Rpb25hbCUyMFJlc2lsaWVuY2UlM0ElMjA1JTIwU2NpZW5jZS1CYWNrZWQlMjBUZWNobmlxdWVzJTIwWW91JTIwQ2FuJTIwVHJ5JTIwVG9kYXl8ZW58MHwwfHx8MTc3MDkwOTMwNHww&ixlib=rb-4.1.0&q=80&w=1080"
 ---
 
 **Denken Sie, dass Sie stets stark sein müssen? Nicht unbedingt.** Emotionale Resilienz bedeutet nicht, Gefühle zu unterdrücken, sondern sie klug zu managen.

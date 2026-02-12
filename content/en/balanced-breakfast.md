@@ -4,6 +4,7 @@ description: "A simple formula for steady energy and fewer cravings."
 publishDate: "2026-02-05"
 tags: ["nutrition", "breakfast", "energy"]
 lang: "en"
+coverImage: "https://images.unsplash.com/photo-1629477100779-b9a01f7803b4?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w4NzMyOTR8MHwxfHNlYXJjaHwxfHxBJTIwQmFsYW5jZWQlMjBCcmVha2Zhc3QlMjBUaGF0JTIwS2VlcHMlMjBZb3UlMjBGdWxsfGVufDB8MHx8fDE3NzA5MDkyOTZ8MA&ixlib=rb-4.1.0&q=80&w=1080"
 ---
 
 ![Balanced breakfast illustration](/images/en/cover.svg)

@@ -4,6 +4,7 @@ description: "A simple night routine to calm the nervous system and fall asleep 
 publishDate: "2026-02-10"
 tags: ["sleep", "routine", "relaxation"]
 lang: "en"
+coverImage: "https://images.unsplash.com/photo-1520206183501-b80df61043c2?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w4NzMyOTR8MHwxfHNlYXJjaHwxfHxIb3clMjB0byUyMEZhbGwlMjBBc2xlZXAlMjBGYXN0ZXIlMjBXaXRob3V0JTIwUGlsbHN8ZW58MHwwfHx8MTc3MDkwOTMyMHww&ixlib=rb-4.1.0&q=80&w=1080"
 ---
 
 ![Sleep routine illustration](/images/en/cover.svg)

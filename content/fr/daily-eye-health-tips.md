@@ -3,6 +3,7 @@ title: "Conseils quotidiens pour une bonne santé des yeux"
 date: "2026-02-11"
 description: "Découvrez des façons simples et efficaces de maintenir vos yeux en bonne santé chaque jour."
 tags: ["Daily Tip", "Health"]
+coverImage: "https://images.unsplash.com/photo-1697115020088-a6486bc7d384?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w4NzMyOTR8MHwxfHNlYXJjaHwxfHxEYWlseSUyMEV5ZSUyMEhlYWx0aCUyMFRpcHMlMjBmb3IlMjBhJTIwQnJpZ2h0ZXIlMjBWaXNpb258ZW58MHwwfHx8MTc3MDkwOTI5OHww&ixlib=rb-4.1.0&q=80&w=1080"
 ---
 
 # Conseils quotidiens pour une bonne santé des yeux

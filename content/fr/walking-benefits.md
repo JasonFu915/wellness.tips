@@ -3,6 +3,7 @@ title: "Les bienfaits de la marche : Des étapes simples pour une meilleure sant
 date: "2026-02-12"
 description: "Découvrez les nombreux bienfaits pour la santé de la marche et comment elle peut améliorer votre vie."
 tags: ["Daily Tip", "Health"]
+coverImage: "https://images.unsplash.com/photo-1752659985958-cb2bc9e5875e?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w4NzMyOTR8MHwxfHNlYXJjaHwxfHxUaGUlMjBQb3dlciUyMG9mJTIwV2Fsa2luZyUzQSUyMFNpbXBsZSUyMFN0ZXBzJTIwdG8lMjBCZXR0ZXIlMjBIZWFsdGh8ZW58MHwwfHx8MTc3MDkwOTMyM3ww&ixlib=rb-4.1.0&q=80&w=1080"
 ---
 
 # Les bienfaits de la marche : Des étapes simples pour une meilleure santé

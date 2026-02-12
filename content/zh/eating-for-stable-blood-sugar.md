@@ -3,6 +3,7 @@ title: "稳定血糖的饮食指南：每天感觉更好的简单方法"
 date: "2026-02-12"
 description: "学习科学验证的饮食技巧，帮助您今天就改善血糖水平。"
 tags: ["Daily Tip", "Health"]
+coverImage: "https://images.unsplash.com/photo-1662973536102-f8ad38733804?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w4NzMyOTR8MHwxfHNlYXJjaHwxfHxFYXRpbmclMjBmb3IlMjBTdGFibGUlMjBCbG9vZCUyMFN1Z2FyJTNBJTIwQSUyMFNpbXBsZSUyMEd1aWRlJTIwdG8lMjBGZWVsJTIwQmV0dGVyJTIwRXZlcnklMjBEYXl8ZW58MHwwfHx8MTc3MDkwOTMwM3ww&ixlib=rb-4.1.0&q=80&w=1080"
 ---
 
 ## 隐藏的能量低谷背后

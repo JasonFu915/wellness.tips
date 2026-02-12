@@ -28,7 +28,7 @@ export async function generateMetadata({ params }) {
       title: post.title,
       description: post.description,
       type: "article",
-      images: [buildCover(post.title, true)]
+      images: [post.coverImage || buildCover(post.title, true)]
     }
   };
 }
@@ -87,7 +87,7 @@ export default async function PostDetailPage({ params }) {
     datePublished: post.publishDate,
     inLanguage: post.lang,
     mainEntityOfPage: `${siteUrl}/${params.lang}/${params.slug}`,
-    image: buildCover(post.title, true)
+    image: post.coverImage || buildCover(post.title, true)
   };
 
   const websiteSchema = {
@@ -143,7 +143,7 @@ export default async function PostDetailPage({ params }) {
               {/* Cover Image */}
               <div className="relative aspect-video w-full bg-slate-100">
                 <Image
-                  src={buildCover(post.title, false)}
+                  src={post.coverImage || buildCover(post.title, false)}
                   alt={post.title}
                   fill
                   className="object-cover"

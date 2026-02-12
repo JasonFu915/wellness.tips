@@ -3,6 +3,7 @@ title: "早晨拉伸：开启健康一天的简单方法"
 date: "2026-02-12"
 description: "早上做拉伸，感受不一样的活力。"
 tags: ["Daily Tip", "Health"]
+coverImage: "https://images.unsplash.com/photo-1552650272-b8a34e21bc4b?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w4NzMyOTR8MHwxfHNlYXJjaHwxfHxNb3JuaW5nJTIwU3RyZXRjaGluZyUzQSUyMEElMjBTaW1wbGUlMjBXYXklMjB0byUyMEtpY2tzdGFydCUyMFlvdXIlMjBEYXl8ZW58MHwwfHx8MTc3MDkwOTMxM3ww&ixlib=rb-4.1.0&q=80&w=1080"
 ---
 
 ## 早晨的误区

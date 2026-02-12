@@ -1,5 +1,16 @@
+import Link from "next/link";
+
+const labels = {
+  en: { privacy: "Privacy Policy", email: "Email Us" },
+  zh: { privacy: "隐私政策", email: "联系我们" },
+  es: { privacy: "Política de Privacidad", email: "Contáctenos" },
+  fr: { privacy: "Politique de Confidentialité", email: "Contactez-nous" },
+  de: { privacy: "Datenschutz", email: "Kontakt" }
+};
+
 export default function Footer({ lang }) {
   const year = new Date().getFullYear();
+  const text = labels[lang] || labels.en;
   
   return (
     <footer className="bg-slate-900 py-12 text-sm text-slate-400">
@@ -10,9 +21,12 @@ export default function Footer({ lang }) {
             <span>© {year} All rights reserved.</span>
           </div>
           <div className="flex gap-6">
-            <a href="#" className="transition-colors hover:text-white">Privacy Policy</a>
-            <a href="#" className="transition-colors hover:text-white">Terms of Service</a>
-            <a href="#" className="transition-colors hover:text-white">Contact</a>
+            <Link href="/privacy-policy" className="transition-colors hover:text-white">
+              {text.privacy}
+            </Link>
+            <a href="mailto:jinsong915@gmail.com" className="transition-colors hover:text-white">
+              {text.email}
+            </a>
           </div>
         </div>
       </div>

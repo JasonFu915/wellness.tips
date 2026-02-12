@@ -3,6 +3,7 @@ title: "Fortalece tu resiliencia emocional: 5 técnicas respaldadas por la cienc
 date: "2026-02-12"
 description: "Aprende métodos prácticos y respaldados por la ciencia para mejorar tu resiliencia emocional y manejar el estrés mejor."
 tags: ["Daily Tip", "Health"]
+coverImage: "https://images.unsplash.com/photo-1546440765-e7e3c881b5fe?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w4NzMyOTR8MHwxfHNlYXJjaHwxfHxCdWlsZCUyMEVtb3Rpb25hbCUyMFJlc2lsaWVuY2UlM0ElMjA1JTIwU2NpZW5jZS1CYWNrZWQlMjBUZWNobmlxdWVzJTIwWW91JTIwQ2FuJTIwVHJ5JTIwVG9kYXl8ZW58MHwwfHx8MTc3MDkwOTMwNHww&ixlib=rb-4.1.0&q=80&w=1080"
 ---
 
 **¿Crees que debes ser fuerte todo el tiempo? No necesariamente.** La resiliencia emocional no se trata de reprimir sentimientos, sino de gestionarlos con sabiduría.

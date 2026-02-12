@@ -3,6 +3,7 @@ title: "Consejos diarios para la salud ocular"
 date: "2026-02-11"
 description: "Descubre formas simples y efectivas de mantener tus ojos sanos cada día."
 tags: ["Daily Tip", "Health"]
+coverImage: "https://images.unsplash.com/photo-1697115020088-a6486bc7d384?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w4NzMyOTR8MHwxfHNlYXJjaHwxfHxEYWlseSUyMEV5ZSUyMEhlYWx0aCUyMFRpcHMlMjBmb3IlMjBhJTIwQnJpZ2h0ZXIlMjBWaXNpb258ZW58MHwwfHx8MTc3MDkwOTI5OHww&ixlib=rb-4.1.0&q=80&w=1080"
 ---
 
 # Consejos diarios para la salud ocular

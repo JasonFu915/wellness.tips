@@ -3,6 +3,7 @@ title: "La importancia de un desayuno equilibrado"
 date: "2026-02-11"
 description: "Descubre cómo un desayuno equilibrado puede aumentar tu energía, mejorar tu concentración y apoyar la salud a largo plazo."
 tags: ["Daily Tip", "Health"]
+coverImage: "https://images.unsplash.com/photo-1627024522062-423243235d50?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w4NzMyOTR8MHwxfHNlYXJjaHwxfHxUaGUlMjBQb3dlciUyMG9mJTIwYSUyMEJhbGFuY2VkJTIwQnJlYWtmYXN0fGVufDB8MHx8fDE3NzA5MDkyOTV8MA&ixlib=rb-4.1.0&q=80&w=1080"
 ---
 
 ## ¿Por qué el desayuno equilibrado es importante?

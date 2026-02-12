@@ -3,6 +3,7 @@ title: "提升情绪韧性：5个科学验证的技巧，今天就可以尝试"
 date: "2026-02-12"
 description: "学习实用、科学验证的方法来增强情绪韧性并更好地应对压力。"
 tags: ["Daily Tip", "Health"]
+coverImage: "https://images.unsplash.com/photo-1546440765-e7e3c881b5fe?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w4NzMyOTR8MHwxfHNlYXJjaHwxfHxCdWlsZCUyMEVtb3Rpb25hbCUyMFJlc2lsaWVuY2UlM0ElMjA1JTIwU2NpZW5jZS1CYWNrZWQlMjBUZWNobmlxdWVzJTIwWW91JTIwQ2FuJTIwVHJ5JTIwVG9kYXl8ZW58MHwwfHx8MTc3MDkwOTMwNHww&ixlib=rb-4.1.0&q=80&w=1080"
 ---
 
 **你觉得你必须一直坚强？不一定。** 情绪韧性并不是压抑感受，而是明智地管理它们。

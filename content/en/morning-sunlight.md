@@ -4,6 +4,7 @@ description: "A 10-minute morning light routine that boosts alertness and suppor
 publishDate: "2026-02-08"
 tags: ["energy", "sleep", "morning"]
 lang: "en"
+coverImage: "https://images.unsplash.com/photo-1764867248357-f1d63647bff3?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w4NzMyOTR8MHwxfHNlYXJjaHwxfHxNb3JuaW5nJTIwU3VubGlnaHQlMjBmb3IlMjBCZXR0ZXIlMjBFbmVyZ3klMjBhbmQlMjBTbGVlcHxlbnwwfDB8fHwxNzcwOTA5MzE2fDA&ixlib=rb-4.1.0&q=80&w=1080"
 ---
 
 ![Morning sunlight illustration](/images/en/cover.svg)

@@ -13,7 +13,7 @@ export default function FeaturedPosts({ posts, lang }) {
         >
           <div className="relative aspect-video w-full overflow-hidden">
             <Image
-              src={buildCover(post.title)}
+              src={post.coverImage || buildCover(post.title)}
               alt={post.title}
               fill
               className="object-cover transition-transform duration-500 group-hover:scale-105"

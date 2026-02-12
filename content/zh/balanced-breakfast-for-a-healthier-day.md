@@ -3,6 +3,7 @@ title: "均衡早餐的力量"
 date: "2026-02-11"
 description: "了解均衡早餐如何提升你的能量、改善专注力并支持长期健康。"
 tags: ["Daily Tip", "Health"]
+coverImage: "https://images.unsplash.com/photo-1627024522062-423243235d50?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w4NzMyOTR8MHwxfHNlYXJjaHwxfHxUaGUlMjBQb3dlciUyMG9mJTIwYSUyMEJhbGFuY2VkJTIwQnJlYWtmYXN0fGVufDB8MHx8fDE3NzA5MDkyOTV8MA&ixlib=rb-4.1.0&q=80&w=1080"
 ---
 
 ## 为什么均衡早餐很重要

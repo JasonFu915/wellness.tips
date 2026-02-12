@@ -4,6 +4,7 @@ description: "Small walking cues that add up to better energy, mood, and heart h
 publishDate: "2026-02-06"
 tags: ["walking", "movement", "energy"]
 lang: "en"
+coverImage: "https://images.unsplash.com/photo-1715309279376-befecf88ea6c?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w4NzMyOTR8MHwxfHNlYXJjaHwxfHxCdWlsZCUyMGElMjBEYWlseSUyMFdhbGtpbmclMjBIYWJpdCUyMFdpdGhvdXQlMjBFeHRyYSUyMFRpbWV8ZW58MHwwfHx8MTc3MDkwOTMyNHww&ixlib=rb-4.1.0&q=80&w=1080"
 ---
 
 ![Walking illustration](/images/en/cover.svg)

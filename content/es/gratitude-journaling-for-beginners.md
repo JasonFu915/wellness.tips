@@ -3,6 +3,7 @@ title: "Diario de gratitud para principiantes: una forma sencilla de mejorar tu 
 date: "2026-02-12"
 description: "Empieza a sentirte mejor hoy con este guía respaldada por la ciencia sobre el diario de gratitud."
 tags: ["Daily Tip", "Health"]
+coverImage: "https://images.unsplash.com/photo-1657879005659-e0063bf20f42?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w4NzMyOTR8MHwxfHNlYXJjaHwxfHxHcmF0aXR1ZGUlMjBKb3VybmFsaW5nJTIwZm9yJTIwQmVnaW5uZXJzJTNBJTIwQSUyMFNpbXBsZSUyMFdheSUyMHRvJTIwQm9vc3QlMjBZb3VyJTIwV2VsbC1CZWluZ3xlbnwwfDB8fHwxNzcwOTA5MzEwfDA&ixlib=rb-4.1.0&q=80&w=1080"
 ---
 
 **¿Te sientes abrumado? No estás solo.** Muchas personas piensan que necesitan ser perfectas o tener muchas cosas para estar agradecidas, pero eso no es cierto. La gratitud no requiere gestos grandes; comienza con pequeños momentos diarios.

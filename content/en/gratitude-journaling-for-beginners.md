@@ -3,6 +3,7 @@ title: "Gratitude Journaling for Beginners: A Simple Way to Boost Your Well-Bein
 date: "2026-02-12"
 description: "Start feeling better today with this science-backed gratitude journaling guide."
 tags: ["Daily Tip", "Health"]
+coverImage: "https://images.unsplash.com/photo-1657879005659-e0063bf20f42?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w4NzMyOTR8MHwxfHNlYXJjaHwxfHxHcmF0aXR1ZGUlMjBKb3VybmFsaW5nJTIwZm9yJTIwQmVnaW5uZXJzJTNBJTIwQSUyMFNpbXBsZSUyMFdheSUyMHRvJTIwQm9vc3QlMjBZb3VyJTIwV2VsbC1CZWluZ3xlbnwwfDB8fHwxNzcwOTA5MzEwfDA&ixlib=rb-4.1.0&q=80&w=1080"
 ---
 
 **Feeling overwhelmed? You're not alone.** Many people think they need to be perfect or have a lot to be grateful for, but that's not true. Gratitude doesn't require grand gestures—it starts with small, daily moments.

@@ -4,6 +4,7 @@ description: "A gentle routine that reduces screen time and helps you unwind."
 publishDate: "2026-02-01"
 tags: ["sleep", "screen", "routine"]
 lang: "en"
+coverImage: "https://images.unsplash.com/photo-1706894854720-f5b6338443f8?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w4NzMyOTR8MHwxfHNlYXJjaHwxfHxBbiUyMEV2ZW5pbmclMjBEaWdpdGFsJTIwRGV0b3glMjBmb3IlMjBCZXR0ZXIlMjBTbGVlcHxlbnwwfDB8fHwxNzcwOTA5MzAwfDA&ixlib=rb-4.1.0&q=80&w=1080"
 ---
 
 ![Digital detox illustration](/images/en/cover.svg)

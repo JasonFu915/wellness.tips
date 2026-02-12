@@ -3,6 +3,7 @@ title: "Beneficios de caminar: Pasos simples para una mejor salud"
 date: "2026-02-12"
 description: "Descubre los numerosos beneficios para la salud de caminar y cómo puede mejorar tu vida."
 tags: ["Daily Tip", "Health"]
+coverImage: "https://images.unsplash.com/photo-1752659985958-cb2bc9e5875e?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w4NzMyOTR8MHwxfHNlYXJjaHwxfHxUaGUlMjBQb3dlciUyMG9mJTIwV2Fsa2luZyUzQSUyMFNpbXBsZSUyMFN0ZXBzJTIwdG8lMjBCZXR0ZXIlMjBIZWFsdGh8ZW58MHwwfHx8MTc3MDkwOTMyM3ww&ixlib=rb-4.1.0&q=80&w=1080"
 ---
 
 # Beneficios de caminar: Pasos simples para una mejor salud
