@@ -2,7 +2,7 @@ name: Daily Health Tip Generator
 
 on:
   schedule:
-    - cron: '0 0 * * *'  # Runs daily at 00:00 UTC (08:00 Beijing Time)
+    - cron: '15 0 * * *'  # Runs daily at 00:15 UTC (08:15 Beijing Time) to avoid congestion
   workflow_dispatch:      # Allows manual trigger for testing
 
 jobs:
@@ -55,4 +55,17 @@ jobs:
             git push
           else
             echo "No changes to commit"
+          fi
+
+      - name: Trigger Vercel Deployment
+        if: success()
+        env:
+          VERCEL_DEPLOY_HOOK: ${{ secrets.VERCEL_DEPLOY_HOOK }}
+        run: |
+          if [ -n "$VERCEL_DEPLOY_HOOK" ]; then
+            echo "Triggering Vercel deployment..."
+            curl -X POST "$VERCEL_DEPLOY_HOOK"
+          else
+            echo "No VERCEL_DEPLOY_HOOK secret found. Skipping Vercel trigger."
+            echo "To enable auto-deploy for bot commits, add VERCEL_DEPLOY_HOOK in GitHub Secrets."
           fi
