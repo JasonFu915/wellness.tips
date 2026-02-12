@@ -84,7 +84,7 @@ export default function LangHomePage({ params }) {
         <div className="container relative mx-auto px-4 text-center">
           <div className="mx-auto mb-6 inline-flex items-center rounded-full border border-primary-100 bg-primary-50 px-3 py-1 text-sm text-primary-700">
             <span className="mr-2 flex h-2 w-2 rounded-full bg-primary-500"></span>
-            {text.dailyUpdates}
+            {text.dailyUpdates} <span className="ml-2 text-xs opacity-50">v2.1</span>
           </div>
           <h1 className="mb-6 text-4xl font-extrabold tracking-tight text-slate-900 sm:text-5xl md:text-6xl">
             {text.headline}
