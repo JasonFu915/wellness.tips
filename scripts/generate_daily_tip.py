@@ -16,11 +16,37 @@ print(f"DashScope API Key found (starts with: {api_key[:4]}***)")
 
 # List of topics to rotate through
 TOPICS = [
+    # === 原有主题（保留）===
     "Better Sleep Habits", "Hydration Benefits", "Mindfulness Meditation", 
     "Healthy Snacking", "Morning Stretching", "Digital Detox", 
     "Posture Correction", "Eye Health", "Stress Management", 
     "Balanced Breakfast", "Walking Benefits", "Sugar Reduction",
-    "Immune System Boost", "Vitamin D Importance", "Gut Health"
+    "Immune System Boost", "Vitamin D Importance", "Gut Health",
+
+    # === 新增：心理健康 ===
+    "Emotional Resilience Techniques",
+    "How to Stop Overthinking at Night",
+    "Gratitude Journaling for Beginners",
+
+    # === 新增：深度睡眠 ===
+    "Cooling Your Bedroom for Deeper Sleep",
+    "How Caffeine Half-Life Affects Sleep",
+
+    # === 新增：营养科学 ===
+    "Protein Timing for Energy Stability",
+    "Fiber-Rich Foods That Reduce Bloating",
+    "Eating for Stable Blood Sugar",
+
+    # === 新增：微运动 ===
+    "Desk Yoga for Neck and Shoulder Relief",
+    "2-Minute Post-Lunch Walks That Boost Digestion",
+
+    # === 新增：自然疗法 ===
+    "Cold Shower Benefits (Backed by Science)",
+    "Sunlight Exposure for Circadian Rhythm",
+
+    # === 新增：家庭健康 ===
+    "Screen-Free Family Dinners: How to Start"
 ]
 
 LANGUAGES = ['en', 'zh', 'es', 'fr', 'de']
