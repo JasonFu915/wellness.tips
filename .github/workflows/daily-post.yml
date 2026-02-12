@@ -64,7 +64,12 @@ jobs:
         run: |
           if [ -n "$VERCEL_DEPLOY_HOOK" ]; then
             echo "Triggering Vercel deployment..."
-            curl -X POST "$VERCEL_DEPLOY_HOOK"
+            STATUS=$(curl -s -o /dev/null -w "%{http_code}" -X POST "$VERCEL_DEPLOY_HOOK")
+            echo "Vercel deploy hook HTTP status: $STATUS"
+            if [ "$STATUS" -lt 200 ] || [ "$STATUS" -ge 300 ]; then
+              echo "::error::Vercel deploy hook failed with status $STATUS. Check hook URL and project settings."
+              exit 1
+            fi
           else
             echo "No VERCEL_DEPLOY_HOOK secret found. Skipping Vercel trigger."
             echo "To enable auto-deploy for bot commits, add VERCEL_DEPLOY_HOOK in GitHub Secrets."
