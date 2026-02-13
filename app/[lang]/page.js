@@ -79,7 +79,7 @@ export default function LangHomePage({ params }) {
   return (
     <div className="flex flex-col pb-20">
       {/* Hero Section */}
-      <section className="relative bg-white pt-20 pb-24 sm:pt-32 sm:pb-32">
+      <section className="relative z-10 bg-white pt-20 pb-24 sm:pt-32 sm:pb-32">
         {/* Decorative Background Blobs */}
         <div className="pointer-events-none absolute inset-0 overflow-hidden">
           <div className="absolute -left-[10%] -top-[10%] h-[500px] w-[500px] rounded-full bg-secondary-100/50 blur-3xl mix-blend-multiply opacity-70"></div>

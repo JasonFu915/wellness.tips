@@ -18,12 +18,20 @@ export async function generateMetadata({ params }) {
   const siteUrl = getSiteUrl();
   const lang = params.lang;
 
+  const descriptions = {
+    en: "Science-backed daily health tips for better sleep, nutrition, and mental wellbeing.",
+    zh: "科学、实用、每日更新的健康生活建议，涵盖睡眠、饮食与心理健康。",
+    es: "Consejos diarios de salud respaldados por la ciencia para dormir mejor, nutrición y bienestar.",
+    fr: "Conseils santé quotidiens validés par la science pour le sommeil, la nutrition et le bien-être.",
+    de: "Wissenschaftlich fundierte tägliche Gesundheitstipps für besseren Schlaf, Ernährung und Wohlbefinden."
+  };
+
   return {
     title: {
       default: "Daily Health Tips",
       template: "%s | Daily Health Tips"
     },
-    description: "科学、实用、每日更新的健康生活建议。",
+    description: descriptions[lang] || descriptions.en,
     metadataBase: new URL(siteUrl),
     alternates: {
       canonical: `${siteUrl}/${lang}`,

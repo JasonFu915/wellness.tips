@@ -14,3 +14,9 @@ pnpm-debug.log*
 .DS_Store
 .idea/
 .vscode/
+
+# Documentation to ignore
+🚀 Daily Health Tips 部署与运维手册.md
+开发完成记录.md
+网站运维与日常管理手册.md
+需求文档.md
