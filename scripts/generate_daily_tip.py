@@ -246,18 +246,20 @@ def save_files(json_data):
                 if cover_image == "/images/en/cover.svg" and lang != 'en':
                      current_cover = f"/images/{lang}/cover.svg"
 
-                file_content = f"""---
-id: "{post_id}"
-title: "{content['title']}"
-description: "{content['description']}"
-publishDate: "{today}"
-tags: {json.dumps(content.get('tags', ["Daily Tip", "Health"]), ensure_ascii=False)}
-lang: "{lang}"
-coverImage: "{current_cover}"
----
-
-{content['content']}
-"""
+                # Construct file content safely avoiding triple quotes
+                tags_json = json.dumps(content.get('tags', ["Daily Tip", "Health"]), ensure_ascii=False)
+                file_content = (
+                    f"---\n"
+                    f'id: "{post_id}"\n'
+                    f'title: "{content["title"]}"\n'
+                    f'description: "{content["description"]}"\n'
+                    f'publishDate: "{today}"\n'
+                    f'tags: {tags_json}\n'
+                    f'lang: "{lang}"\n'
+                    f'coverImage: "{current_cover}"\n'
+                    f"---\n\n"
+                    f"{content['content']}\n"
+                )
                 # Ensure directory exists
                 dir_path = os.path.join('content', lang)
                 os.makedirs(dir_path, exist_ok=True)
