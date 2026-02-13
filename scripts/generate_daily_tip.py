@@ -251,7 +251,7 @@ id: "{post_id}"
 title: "{content['title']}"
 description: "{content['description']}"
 publishDate: "{today}"
-tags: {json.dumps(data.get('tags', ["Daily Tip", "Health"]), ensure_ascii=False)}
+tags: {json.dumps(content.get('tags', ["Daily Tip", "Health"]), ensure_ascii=False)}
 lang: "{lang}"
 coverImage: "{current_cover}"
 ---
