@@ -22,25 +22,41 @@ def get_unsplash_image(keyword):
         print("::warning::UNSPLASH_ACCESS_KEY not found. API calls will fail.")
         return None
 
-    url = "https://api.unsplash.com/search/photos"
-    params = {
-        "query": keyword,
-        "per_page": 1,
-        "orientation": "landscape",
-        "client_id": access_key
-    }
+    # Try different search strategies if the exact title fails
+    search_terms = [keyword]
     
-    try:
-        response = requests.get(url, params=params, timeout=10)
-        if response.status_code == 200:
-            data = response.json()
-            if data['results']:
-                return data['results'][0]['urls']['regular']
-        else:
-            print(f"API Error: {response.status_code} - {response.text}")
-    except Exception as e:
-        print(f"Unsplash API Exception: {e}")
+    # Add a simplified term (first 3 words) if title is long
+    words = keyword.split()
+    if len(words) > 3:
+        search_terms.append(" ".join(words[:3]))
     
+    # Add a very generic fallback term related to health
+    search_terms.append("health wellness")
+
+    for term in search_terms:
+        # print(f"  Trying search term: {term}") # Debug
+        url = "https://api.unsplash.com/search/photos"
+        params = {
+            "query": term,
+            "per_page": 1,
+            "orientation": "landscape",
+            "client_id": access_key
+        }
+        
+        try:
+            response = requests.get(url, params=params, timeout=10)
+            if response.status_code == 200:
+                data = response.json()
+                if data['results']:
+                    return data['results'][0]['urls']['regular']
+            else:
+                print(f"API Error: {response.status_code}")
+                # If error is auth related, no point trying other terms
+                if response.status_code in [401, 403]:
+                    break
+        except Exception as e:
+            print(f"Unsplash API Exception: {e}")
+            
     return None
 
 def update_file(file_path, image_url):
@@ -62,7 +78,7 @@ def update_file(file_path, image_url):
 
     # Check if coverImage is already valid
     current_cover = frontmatter.get('coverImage')
-    if current_cover and current_cover.strip():
+    if current_cover and current_cover.strip() and 'cover.svg' not in current_cover:
         # It has a valid cover image
         return
 
@@ -151,7 +167,9 @@ def main():
                     fm_match = re.match(r'^---\s*\n([\s\S]*?)\n---\s*\n', content)
                     if fm_match:
                         fm = yaml.safe_load(fm_match.group(1))
-                        if not fm.get('coverImage') or not fm.get('coverImage').strip():
+                        if not fm.get('coverImage') or \
+                           not fm.get('coverImage').strip() or \
+                           'cover.svg' in fm.get('coverImage', ''):
                             needs_update = True
             except:
                 continue
@@ -165,8 +183,16 @@ def main():
                     if image_url:
                         # Sleep only if we actually called the API
                         time.sleep(1) 
+                    else:
+                        print(f"-> Unsplash returned no image for: {title}")
                 
-                update_file(lang_path, image_url)
+                # Only update if we have a REAL new image (not fallback to svg again if we are trying to replace svg)
+                # If image_url is None, update_file would default to svg, which is pointless if we are already svg.
+                if image_url:
+                     update_file(lang_path, image_url)
+                elif 'cover.svg' not in fm.get('coverImage', ''):
+                     # If it's empty (not svg), we can at least set it to svg as fallback
+                     update_file(lang_path, None)
 
 if __name__ == "__main__":
     main()
