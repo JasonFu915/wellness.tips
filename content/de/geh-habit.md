@@ -6,8 +6,6 @@ tags: ["gehen", "bewegung", "energie"]
 lang: "de"
 ---
 
-![Gehen Illustration](/images/de/cover.svg)
-
 Gehen ist eine der einfachsten Bewegungsformen. Der Trick ist, es in kleine Teile des Tages einzubauen.
 
 ## Einfache Auslöser

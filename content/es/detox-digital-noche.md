@@ -6,8 +6,6 @@ tags: ["sueño", "pantallas", "rutina"]
 lang: "es"
 ---
 
-![Ilustración digital](/images/es/cover.svg)
-
 Las pantallas mantienen el cerebro activo. Un detox digital corto reduce la estimulación y ayuda a relajarte antes de dormir.
 
 ## Regla de 30 minutos

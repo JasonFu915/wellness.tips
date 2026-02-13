@@ -7,8 +7,6 @@ lang: "en"
 coverImage: "https://images.unsplash.com/photo-1511994501413-7752c87af739?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w4NzMyOTR8MHwxfHNlYXJjaHwxfHxCdWlsZCUyMGElMjBIeWRyYXRpb24lMjBIYWJpdCUyMFRoYXQlMjBTdGlja3N8ZW58MHwwfHx8MTc3MDkwOTMxMnww&ixlib=rb-4.1.0&q=80&w=1080"
 ---
 
-![Hydration illustration](/images/en/cover.svg)
-
 Many people do not drink enough water, not because they do not care, but because the day moves fast. Hydration works best when it becomes automatic, tied to cues you already follow. This guide shows three simple triggers and a realistic plan to help you drink consistently without feeling forced.
 
 ## Simple Cues

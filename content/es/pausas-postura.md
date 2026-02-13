@@ -6,8 +6,6 @@ tags: ["postura", "oficina", "movilidad"]
 lang: "es"
 ---
 
-![Ilustración de postura](/images/es/cover.svg)
-
 Estar sentado mucho tiempo tensa la espalda y los hombros. La solución es hacer pequeñas pausas frecuentes, no sesiones largas.
 
 ## Rutina de 2 minutos

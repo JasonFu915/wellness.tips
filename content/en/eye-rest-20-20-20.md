@@ -7,8 +7,6 @@ lang: "en"
 coverImage: "https://images.unsplash.com/photo-1557311549-c5dcff395834?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w4NzMyOTR8MHwxfHNlYXJjaHwxfHxUaGUlMjAyMC0yMC0yMCUyMFJ1bGUlMjB0byUyMFJlZHVjZSUyMEV5ZSUyMFN0cmFpbnxlbnwwfDB8fHwxNzcwOTA5MzA2fDA&ixlib=rb-4.1.0&q=80&w=1080"
 ---
 
-![Eye rest illustration](/images/en/cover.svg)
-
 If your eyes feel tired after a long day at the computer, you are not alone. The 20-20-20 rule is a quick habit that reduces strain and keeps your focus sharp.
 
 ## The Rule

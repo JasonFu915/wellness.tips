@@ -6,8 +6,6 @@ tags: ["sommeil", "écrans", "routine"]
 lang: "fr"
 ---
 
-![Illustration numérique](/images/fr/cover.svg)
-
 Les écrans stimulent le cerveau. Une détox digitale courte aide à se détendre avant de dormir.
 
 ## Règle des 30 minutes

@@ -7,8 +7,6 @@ lang: "en"
 coverImage: "https://images.unsplash.com/photo-1629477100779-b9a01f7803b4?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w4NzMyOTR8MHwxfHNlYXJjaHwxfHxBJTIwQmFsYW5jZWQlMjBCcmVha2Zhc3QlMjBUaGF0JTIwS2VlcHMlMjBZb3UlMjBGdWxsfGVufDB8MHx8fDE3NzA5MDkyOTZ8MA&ixlib=rb-4.1.0&q=80&w=1080"
 ---
 
-![Balanced breakfast illustration](/images/en/cover.svg)
-
 A good breakfast does not need to be complicated. The goal is stable energy without a crash. The simplest formula is protein + fiber + healthy fat.
 
 ## The 3-Part Formula

@@ -6,8 +6,6 @@ tags: ["posture", "bureau", "mobilité"]
 lang: "fr"
 ---
 
-![Illustration posture](/images/fr/cover.svg)
-
 Rester assis longtemps tend le dos et les épaules. De courtes pauses régulières font une vraie différence.
 
 ## Routine de 2 minutes

@@ -6,8 +6,6 @@ tags: ["matin", "énergie", "sommeil"]
 lang: "fr"
 ---
 
-![Illustration du matin](/images/fr/cover.svg)
-
 La lumière naturelle du matin réveille le cerveau et prépare un meilleur sommeil le soir. Une courte exposition quotidienne suffit.
 
 ## Pourquoi c’est efficace

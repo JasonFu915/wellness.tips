@@ -6,8 +6,6 @@ tags: ["hydratation", "énergie", "habitude"]
 lang: "fr"
 ---
 
-![Illustration hydratation](/images/fr/cover.svg)
-
 On oublie souvent de boire, surtout les journées chargées. Le plus efficace est de lier l’eau à des actions déjà présentes dans votre routine.
 
 ## Déclencheurs

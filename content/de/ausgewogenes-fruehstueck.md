@@ -6,8 +6,6 @@ tags: ["ernaehrung", "fruehstueck", "energie"]
 lang: "de"
 ---
 
-![Frühstück Illustration](/images/de/cover.svg)
-
 Ein gutes Frühstück muss nicht kompliziert sein. Die einfache Formel lautet: Eiweiß + Ballaststoffe + gesunde Fette.
 
 ## Die 3-Teil-Formel

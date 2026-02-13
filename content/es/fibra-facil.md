@@ -6,8 +6,6 @@ tags: ["fibra", "digestión", "nutrición"]
 lang: "es"
 ---
 
-![Ilustración de fibra](/images/es/cover.svg)
-
 La fibra ayuda al intestino, pero subirla demasiado rápido puede causar incomodidad. La clave es avanzar poco a poco y beber suficiente agua.
 
 ## Cambios fáciles

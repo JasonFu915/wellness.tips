@@ -6,8 +6,6 @@ tags: ["mañana", "energía", "sueño"]
 lang: "es"
 ---
 
-![Ilustración de la mañana](/images/es/cover.svg)
-
 La luz natural por la mañana es una de las formas más efectivas de activar tu energía y mejorar el sueño nocturno. No necesitas una rutina perfecta, solo constancia.
 
 ## Por qué funciona

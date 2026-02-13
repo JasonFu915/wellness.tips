@@ -6,8 +6,6 @@ tags: ["sommeil", "relaxation", "routine"]
 lang: "fr"
 ---
 
-![Illustration du sommeil](/images/fr/cover.svg)
-
 Si vous tournez en rond le soir, adoptez un rituel court et régulier. Le sommeil arrive plus facilement quand le corps reçoit des signaux clairs de détente.
 
 ## À faire

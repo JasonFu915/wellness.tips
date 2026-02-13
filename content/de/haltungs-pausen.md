@@ -6,8 +6,6 @@ tags: ["haltung", "buero", "mobilitaet"]
 lang: "de"
 ---
 
-![Haltung Illustration](/images/de/cover.svg)
-
 Langes Sitzen belastet Nacken und Rücken. Kurze Pausen helfen mehr als seltene lange Einheiten.
 
 ## 2-Minuten-Routine

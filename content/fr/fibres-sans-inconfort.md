@@ -6,8 +6,6 @@ tags: ["fibres", "digestion", "nutrition"]
 lang: "fr"
 ---
 
-![Illustration fibres](/images/fr/cover.svg)
-
 Les fibres sont essentielles, mais il faut les augmenter progressivement. L’eau est aussi indispensable.
 
 ## Changements faciles

@@ -6,8 +6,6 @@ tags: ["nutrition", "petit-déjeuner", "énergie"]
 lang: "fr"
 ---
 
-![Illustration petit-déjeuner](/images/fr/cover.svg)
-
 Un bon petit-déjeuner n’a pas besoin d’être compliqué. La formule la plus efficace est : protéines + fibres + bonnes graisses.
 
 ## La formule

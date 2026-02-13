@@ -7,8 +7,6 @@ lang: "en"
 coverImage: "https://images.unsplash.com/photo-1520206183501-b80df61043c2?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w4NzMyOTR8MHwxfHNlYXJjaHwxfHxIb3clMjB0byUyMEZhbGwlMjBBc2xlZXAlMjBGYXN0ZXIlMjBXaXRob3V0JTIwUGlsbHN8ZW58MHwwfHx8MTc3MDkwOTMyMHww&ixlib=rb-4.1.0&q=80&w=1080"
 ---
 
-![Sleep routine illustration](/images/en/cover.svg)
-
 If your mind stays busy at night, you are not alone. Many people feel tired but still struggle to fall asleep because the body has not received a clear signal that it is safe to rest. Sleep is not about forcing yourself to “try harder,” it is about creating the right conditions so your nervous system can downshift naturally.
 
 This guide gives you a simple 10-minute routine you can repeat every night. It is designed to calm the body, reduce mental noise, and build a reliable sleep habit without pills.

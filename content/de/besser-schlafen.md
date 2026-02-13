@@ -6,8 +6,6 @@ tags: ["schlaf", "entspannung", "routine"]
 lang: "de"
 ---
 
-![Schlaf Illustration](/images/de/cover.svg)
-
 Wenn das Einschlafen schwerfällt, hilft ein festes Ritual. Schlaf entsteht leichter, wenn der Körper klare Signale für Ruhe bekommt.
 
 ## Was du tun kannst

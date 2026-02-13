@@ -7,8 +7,6 @@ lang: "en"
 coverImage: "https://images.unsplash.com/photo-1477332552946-cfb384aeaf1c?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w4NzMyOTR8MHwxfHNlYXJjaHwxfHxoZWFsdGglMjB3ZWxsbmVzc3xlbnwwfDB8fHwxNzcwOTcwMjkxfDA&ixlib=rb-4.1.0&q=80&w=1080"
 ---
 
-![Stress reset illustration](/images/en/cover.svg)
-
 When stress builds up, the body shifts into a “fight or flight” state. You can interrupt that cycle in a few minutes without special tools. This short reset helps you return to calm and clarity so you can keep going without burning out.
 
 ## The 3-Step Reset

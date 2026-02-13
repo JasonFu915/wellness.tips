@@ -6,8 +6,6 @@ tags: ["ballaststoffe", "verdauung", "ernaehrung"]
 lang: "de"
 ---
 
-![Ballaststoffe Illustration](/images/de/cover.svg)
-
 Ballaststoffe sind wichtig, aber zu schnelle Steigerung kann unangenehm sein. Langsam erhöhen und genug trinken ist der Schlüssel.
 
 ## Einfache Umstellungen

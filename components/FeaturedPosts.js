@@ -17,7 +17,7 @@ export default function FeaturedPosts({ posts, lang }) {
               alt={post.title}
               fill
               className="object-cover transition-transform duration-500 group-hover:scale-105"
-              unoptimized
+              sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
             />
           </div>
           <div className="flex flex-1 flex-col p-6">

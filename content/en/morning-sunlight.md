@@ -7,8 +7,6 @@ lang: "en"
 coverImage: "https://images.unsplash.com/photo-1764867248357-f1d63647bff3?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w4NzMyOTR8MHwxfHNlYXJjaHwxfHxNb3JuaW5nJTIwU3VubGlnaHQlMjBmb3IlMjBCZXR0ZXIlMjBFbmVyZ3klMjBhbmQlMjBTbGVlcHxlbnwwfDB8fHwxNzcwOTA5MzE2fDA&ixlib=rb-4.1.0&q=80&w=1080"
 ---
 
-![Morning sunlight illustration](/images/en/cover.svg)
-
 Morning light is one of the most powerful tools to set your body clock. It tells your brain “daytime has started,” which increases alertness now and improves sleep later at night. You do not need a perfect routine—just consistent exposure.
 
 ## Why Morning Light Works

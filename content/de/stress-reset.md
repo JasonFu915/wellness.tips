@@ -7,8 +7,6 @@ lang: "de"
 coverImage: "https://images.unsplash.com/photo-1477332552946-cfb384aeaf1c?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w4NzMyOTR8MHwxfHNlYXJjaHwxfHxoZWFsdGglMjB3ZWxsbmVzc3xlbnwwfDB8fHwxNzcwOTcwMjkxfDA&ixlib=rb-4.1.0&q=80&w=1080"
 ---
 
-![Stress Illustration](/images/de/cover.svg)
-
 Wenn Stress steigt, schaltet der Körper in Alarmbereitschaft. Mit dieser kurzen Routine kannst du dich schnell beruhigen.
 
 ## Drei Schritte

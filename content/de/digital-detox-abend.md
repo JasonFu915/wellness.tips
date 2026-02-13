@@ -6,8 +6,6 @@ tags: ["schlaf", "bildschirm", "routine"]
 lang: "de"
 ---
 
-![Digital Detox Illustration](/images/de/cover.svg)
-
 Bildschirme halten das Gehirn aktiv. Ein kurzer Digital-Detox hilft, zur Ruhe zu kommen.
 
 ## 30-Minuten-Regel

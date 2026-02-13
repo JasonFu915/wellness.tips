@@ -2,7 +2,7 @@ import Link from "next/link";
 import Image from "next/image";
 import AdBlock from "../../../components/AdBlock";
 import Sidebar from "../../../components/Sidebar";
-import { markdownToHtml } from "../../../lib/markdown";
+import { markdownToHtml, extractFAQ } from "../../../lib/markdown";
 import { buildCover } from "../../../lib/utils";
 import {
   formatDateByLocale,
@@ -10,7 +10,8 @@ import {
   getAllPosts,
   getPostBySlug,
   getSiteUrl,
-  getPostAlternates
+  getPostAlternates,
+  getRelatedPosts
 } from "../../../lib/posts";
 
 export async function generateStaticParams() {
@@ -82,17 +83,30 @@ export default async function PostDetailPage({ params }) {
   const adSlot = process.env.NEXT_PUBLIC_ADSENSE_SLOT || "";
   const adsEnabled = process.env.NEXT_PUBLIC_ADSENSE_ENABLED === "true" && adClient;
 
-  // Get recent posts for sidebar
-  const allPosts = getAllPosts(params.lang);
-  
-  // Filter out current post
-  const sidebarPosts = allPosts
-    .filter(p => p.slug !== params.slug)
+  // Get related posts for sidebar
+  const sidebarPosts = getRelatedPosts(params.lang, params.slug, post.tags, 5)
     .map(p => ({
       slug: p.slug,
       title: p.title,
       coverImage: p.coverImage
     }));
+
+  const faqs = extractFAQ(post.content);
+  let faqSchema = null;
+  if (faqs.length > 0) {
+      faqSchema = {
+          "@context": "https://schema.org",
+          "@type": "FAQPage",
+          "mainEntity": faqs.map(f => ({
+              "@type": "Question",
+              "name": f.question,
+              "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": f.answer
+              }
+          }))
+      };
+  }
 
   const articleSchema = {
     "@context": "https://schema.org",
@@ -151,6 +165,12 @@ export default async function PostDetailPage({ params }) {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(websiteSchema) }}
       />
+      {faqSchema && (
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
+        />
+      )}
         {/* Breadcrumb & Back Link */}
         <div className="mb-8 flex items-center gap-2 text-sm text-slate-500">
           <Link href={`/${params.lang}`} className="hover:text-primary-600 transition-colors">
@@ -171,16 +191,20 @@ export default async function PostDetailPage({ params }) {
                   alt={post.title}
                   fill
                   className="object-cover"
-                  unoptimized
+                  sizes="(max-width: 768px) 100vw, (max-width: 1200px) 75vw, 66vw"
                   priority
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent" />
                 <div className="absolute bottom-0 left-0 p-6 md:p-10 text-white">
                    <div className="mb-4 flex flex-wrap gap-2">
                       {post.tags && post.tags.map(tag => (
-                        <span key={tag} className="rounded-full bg-white/20 px-3 py-1 text-xs font-medium backdrop-blur-md">
+                        <Link 
+                          key={tag} 
+                          href={`/${params.lang}/tags/${encodeURIComponent(tag)}`}
+                          className="rounded-full bg-white/20 px-3 py-1 text-xs font-medium backdrop-blur-md hover:bg-white/30 transition-colors"
+                        >
                           {tag}
-                        </span>
+                        </Link>
                       ))}
                    </div>
                    <h1 className="mb-4 text-3xl font-bold leading-tight md:text-4xl lg:text-5xl">

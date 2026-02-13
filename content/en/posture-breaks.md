@@ -7,8 +7,6 @@ lang: "en"
 coverImage: "https://images.unsplash.com/photo-1674471361339-2e1e1dbd3e73?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w4NzMyOTR8MHwxfHNlYXJjaHwxfHxQb3N0dXJlJTIwQnJlYWtzJTIwZm9yJTIwRGVzayUyMFdvcmtlcnN8ZW58MHwwfHx8MTc3MDkwOTMxOHww&ixlib=rb-4.1.0&q=80&w=1080"
 ---
 
-![Posture illustration](/images/en/cover.svg)
-
 Sitting for hours tightens the hips, compresses the spine, and strains the neck. The solution is not a perfect chair—it is small, frequent movement.
 
 ## The 2-Minute Reset

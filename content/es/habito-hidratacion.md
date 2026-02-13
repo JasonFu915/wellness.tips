@@ -6,8 +6,6 @@ tags: ["hidratación", "energía", "hábito"]
 lang: "es"
 ---
 
-![Ilustración de hidratación](/images/es/cover.svg)
-
 Muchas personas olvidan beber agua durante el día. La clave no es “forzarte”, sino crear recordatorios simples que se repitan.
 
 ## Señales simples

@@ -7,8 +7,6 @@ lang: "en"
 coverImage: "https://images.unsplash.com/photo-1553531580-8f1950e53700?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w4NzMyOTR8MHwxfHNlYXJjaHwxfHxCb29zdCUyMFlvdXIlMjBGaWJlciUyMEludGFrZSUyMFdpdGhvdXQlMjBGZWVsaW5nJTIwQmxvYXRlZHxlbnwwfDB8fHwxNzcwOTA5MzA4fDA&ixlib=rb-4.1.0&q=80&w=1080"
 ---
 
-![Fiber illustration](/images/en/cover.svg)
-
 Fiber supports digestion, gut health, and steady energy, but many people get far less than they need. The key is to increase fiber gradually and with enough water.
 
 ## Easy Fiber Swaps

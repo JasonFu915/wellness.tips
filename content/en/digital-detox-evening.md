@@ -7,8 +7,6 @@ lang: "en"
 coverImage: "https://images.unsplash.com/photo-1706894854720-f5b6338443f8?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w4NzMyOTR8MHwxfHNlYXJjaHwxfHxBbiUyMEV2ZW5pbmclMjBEaWdpdGFsJTIwRGV0b3glMjBmb3IlMjBCZXR0ZXIlMjBTbGVlcHxlbnwwfDB8fHwxNzcwOTA5MzAwfDA&ixlib=rb-4.1.0&q=80&w=1080"
 ---
 
-![Digital detox illustration](/images/en/cover.svg)
-
 Screens keep the brain alert. If you scroll right up until bedtime, your body stays wired. A short digital detox does not require strict rules—just clear boundaries.
 
 ## The 30-Minute Rule

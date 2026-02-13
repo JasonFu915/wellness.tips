@@ -6,8 +6,6 @@ tags: ["sueño", "relajación", "rutina"]
 lang: "es"
 ---
 
-![Ilustración del sueño](/images/es/cover.svg)
-
 Si te cuesta dormir, prueba una secuencia simple antes de acostarte. Dormir no es cuestión de fuerza de voluntad, sino de crear señales claras para que el cuerpo se relaje. Este plan te ayuda a calmar el sistema nervioso y a dormir con más facilidad.
 
 ## Qué hacer

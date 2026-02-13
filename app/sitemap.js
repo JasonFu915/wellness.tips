@@ -2,7 +2,8 @@ import {
   getAllLanguages,
   getAllSlugs,
   getPaginatedPosts,
-  getSiteUrl
+  getSiteUrl,
+  getAllTags
 } from "../lib/posts";
 
 export default function sitemap() {
@@ -23,6 +24,16 @@ export default function sitemap() {
         priority: 0.7
       });
     }
+    
+    // Add Tags
+    const tags = getAllTags(lang);
+    tags.forEach(tag => {
+      entries.push({
+        url: `${siteUrl}/${lang}/tags/${encodeURIComponent(tag)}`,
+        changefreq: "weekly",
+        priority: 0.6
+      });
+    });
   });
 
   getAllSlugs().forEach((item) => {

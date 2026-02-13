@@ -6,8 +6,6 @@ tags: ["marche", "mouvement", "énergie"]
 lang: "fr"
 ---
 
-![Illustration marche](/images/fr/cover.svg)
-
 Marcher régulièrement améliore la santé sans effort intense. Le secret est d’ajouter de petites marches au fil de la journée.
 
 ## Déclencheurs simples

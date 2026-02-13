@@ -7,8 +7,6 @@ lang: "en"
 coverImage: "https://images.unsplash.com/photo-1715309279376-befecf88ea6c?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w4NzMyOTR8MHwxfHNlYXJjaHwxfHxCdWlsZCUyMGElMjBEYWlseSUyMFdhbGtpbmclMjBIYWJpdCUyMFdpdGhvdXQlMjBFeHRyYSUyMFRpbWV8ZW58MHwwfHx8MTc3MDkwOTMyNHww&ixlib=rb-4.1.0&q=80&w=1080"
 ---
 
-![Walking illustration](/images/en/cover.svg)
-
 Walking is one of the most reliable ways to improve health, but many people struggle to make time for long workouts. The trick is to turn walking into tiny, repeatable moments across your day.
 
 ## Why Walking Works

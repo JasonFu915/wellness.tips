@@ -6,8 +6,6 @@ tags: ["caminar", "movimiento", "energía"]
 lang: "es"
 ---
 
-![Ilustración de caminar](/images/es/cover.svg)
-
 Caminar es una de las formas más fáciles de mejorar la salud, pero suele quedar en segundo plano. La clave es repartirlo en pequeñas acciones durante el día.
 
 ## Señales simples

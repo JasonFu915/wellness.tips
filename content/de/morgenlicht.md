@@ -6,8 +6,6 @@ tags: ["morgen", "energie", "schlaf"]
 lang: "de"
 ---
 
-![Morgenlicht Illustration](/images/de/cover.svg)
-
 Natürliches Licht am Morgen stellt die innere Uhr. Das verbessert die Wachheit am Tag und die Schlafqualität in der Nacht.
 
 ## Warum es wirkt

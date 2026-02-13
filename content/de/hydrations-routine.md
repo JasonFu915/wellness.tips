@@ -6,8 +6,6 @@ tags: ["hydration", "energie", "gewohnheit"]
 lang: "de"
 ---
 
-![Hydration Illustration](/images/de/cover.svg)
-
 Viele Menschen vergessen im Alltag regelmäßig zu trinken. Kleine Auslöser helfen, die Gewohnheit aufzubauen.
 
 ## Drei Auslöser

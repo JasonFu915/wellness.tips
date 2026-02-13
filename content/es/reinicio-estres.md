@@ -6,8 +6,6 @@ tags: ["estrés", "respiración", "enfoque"]
 lang: "es"
 ---
 
-![Ilustración de calma](/images/es/cover.svg)
-
 Cuando el estrés sube, el cuerpo entra en modo alerta. Puedes bajarlo en pocos minutos con una secuencia simple que no requiere equipo.
 
 ## Tres pasos

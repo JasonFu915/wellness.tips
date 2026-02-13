@@ -107,24 +107,42 @@ def get_unsplash_image(keyword):
         print("::warning::UNSPLASH_ACCESS_KEY not found.")
         return ""
 
-    url = "https://api.unsplash.com/search/photos"
-    params = {
-        "query": keyword,
-        "per_page": 1,
-        "orientation": "landscape",
-        "client_id": access_key
-    }
+    # Try different search strategies if the exact title fails
+    search_terms = [keyword]
     
-    try:
-        response = requests.get(url, params=params, timeout=10)
-        if response.status_code == 200:
-            data = response.json()
-            if data['results']:
-                # Return the regular size URL
-                return data['results'][0]['urls']['regular']
-    except Exception as e:
-        print(f"Unsplash API Error: {e}")
+    # Add a simplified term (first 3 words) if title is long
+    words = keyword.split()
+    if len(words) > 3:
+        search_terms.append(" ".join(words[:3]))
     
+    # Add a very generic fallback term related to health
+    search_terms.append("health wellness")
+
+    for term in search_terms:
+        # print(f"  Trying search term: {term}") # Debug
+        url = "https://api.unsplash.com/search/photos"
+        params = {
+            "query": term,
+            "per_page": 1,
+            "orientation": "landscape",
+            "client_id": access_key
+        }
+        
+        try:
+            response = requests.get(url, params=params, timeout=10)
+            if response.status_code == 200:
+                data = response.json()
+                if data['results']:
+                    # Return the regular size URL
+                    return data['results'][0]['urls']['regular']
+            else:
+                print(f"API Error: {response.status_code}")
+                # If error is auth related, no point trying other terms
+                if response.status_code in [401, 403]:
+                    break
+        except Exception as e:
+            print(f"Unsplash API Error: {e}")
+            
     return ""
 
 def generate_content(topic):

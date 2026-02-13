@@ -6,8 +6,6 @@ tags: ["nutrición", "desayuno", "energía"]
 lang: "es"
 ---
 
-![Ilustración de desayuno](/images/es/cover.svg)
-
 Un buen desayuno no tiene que ser complicado. La fórmula más sencilla para mantener la energía es: proteína + fibra + grasa saludable.
 
 ## La fórmula de 3 partes

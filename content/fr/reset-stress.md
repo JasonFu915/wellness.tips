@@ -6,8 +6,6 @@ tags: ["stress", "respiration", "focus"]
 lang: "fr"
 ---
 
-![Illustration calme](/images/fr/cover.svg)
-
 Quand le stress monte, le corps se met en alerte. Cette routine courte aide à redescendre rapidement.
 
 ## Trois étapes
