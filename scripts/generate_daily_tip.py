@@ -147,11 +147,13 @@ def get_unsplash_image(keyword):
 
 def generate_content(topic):
     prompt = f"""
-    You are a health communication expert writing for a global audience. Create a practical, science-backed health tip article about "{topic}" that empowers readers to take immediate action.
+    You are a health communication expert and viral content strategist. 
+    Your goal is to create a health tip article about "{topic}" that gets high clicks BUT delivers high value (The "Hook + Value" strategy).
 
     Output Format: JSON with the following structure for 5 languages (en, zh, es, fr, de):
     {{
       "slug": "english-slug-based-on-title",
+      "image_search_query": "short english keyword for unsplash (max 3 words)",
       "en": {{ "title": "...", "description": "...", "content": "Markdown content...", "tags": ["Tag1", "Tag2"] }},
       "zh": {{ "title": "...", "description": "...", "content": "Markdown content...", "tags": ["Tag1", "Tag2"] }},
       "es": {{ "title": "...", "description": "...", "content": "Markdown content...", "tags": ["Tag1", "Tag2"] }},
@@ -160,37 +162,32 @@ def generate_content(topic):
     }}
 
     Requirements:
-    1. **Tone & Style**:
-       - Professional yet accessible (like a top-tier health blog: Healthline, Mayo Clinic)
-       - Scientific but jargon-free (explain terms like "melatonin" or "hydration" in simple analogies)
-       - Written in second person ("you") to build connection
-       - **Cite 2-3 specific studies** (e.g., "A 2023 study in Nature found...") to boost credibility.
-       - Use an engaging, hook-driven opening.
+    1. **HEADLINE STRATEGY (Controlled Clickbait)**:
+       - DO NOT use boring academic titles (e.g., "Benefits of Water").
+       - DO use "Hook" formulas:
+         - **The Question**: "Are You Sleeping Wrong?"
+         - **The Mistake**: "Stop Eating Apples Like This"
+         - **The Counter-Intuitive**: "Why You Should Skip Breakfast (Sometimes)"
+       - **The Promise**: The content MUST strictly back up the title with science. No deception.
 
-    2. **Content Structure**:
-       - **Title**: Catchy, benefit-driven, under 60 chars.
-       - **Introduction**: Start with a relatable problem or myth.
-       - **The Science**: Include 1–2 key scientific insights from reputable sources (e.g., NIH, WHO, Mayo Clinic).
-       - **Actionable Steps**: Provide 3–5 concrete, easy-to-follow steps (use bullet points).
-       - **FAQ Section**: Include 2-3 common questions and answers at the end.
-       - **Conclusion**: End with an empowering takeaway.
+    2. **Tone & Style**:
+       - Professional yet conversational (Healthline style).
+       - Scientific but accessible.
+       - Direct address ("you").
+       - **Cite 2-3 specific studies** (e.g., "A 2023 Nature study...") to prove the controversial/hooky title is real.
 
-    3. **Length & Format**:
-       - **800–1200 words** per language (Deep Dive).
-       - Use Markdown: H2/H3 headings, bullet points, bold for key tips, blockquotes for warnings.
-       - Avoid fluff—every sentence should deliver value.
+    3. **Content Structure**:
+       - **Introduction**: Hook the reader immediately.
+       - **The Science**: Explain the "why" behind the hook.
+       - **Actionable Steps**: 3-5 bullet points.
+       - **FAQ**: 2-3 questions.
+       - **Conclusion**: Empowering takeaway.
 
-    4. **SEO Optimization**:
-       - Use the main keyword naturally in the first 100 words.
-       - Use LSI keywords (related terms) throughout.
-       - `description`: ≤160 characters, compelling meta description including the main keyword.
-       - `tags`: 3-5 relevant tags.
-
-    5. **Technical Requirements**:
-       - Generate a URL-friendly English slug (e.g., `sleep-better-without-pills`)
-       - `tags`: Generate 3-5 relevant tags for each language in the JSON.
-       - Output as valid JSON
-       - Ensure strict JSON format for parsing.
+    4. **Technical**:
+       - Length: 800-1200 words per language.
+       - `image_search_query`: Since the title might be abstract (e.g., "Stop Doing This"), provide a CONCRETE noun for image search (e.g., "man eating apple" or "sleeping woman").
+       - `description`: < 160 chars, SEO optimized.
+       - Valid JSON output only.
     """
     
     try:
@@ -224,8 +221,14 @@ def save_files(json_data):
         today = datetime.date.today().isoformat()
         post_id = str(uuid.uuid4())
         
-        # Fetch cover image based on English title/keywords
-        cover_image = get_unsplash_image(data['en']['title'])
+        # Fetch cover image based on AI-provided query or English title
+        image_query = data.get('image_search_query')
+        if not image_query:
+            image_query = data['en']['title']
+            
+        print(f"Searching Unsplash for: {image_query}")
+        cover_image = get_unsplash_image(image_query)
+        
         if not cover_image:
             # Fallback to a default image if API fails or no key
             print("::warning::No cover image found. Using default.")
