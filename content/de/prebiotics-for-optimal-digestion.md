@@ -3,7 +3,7 @@ title: "Die Rolle von Probiotika bei der Verbesserung der Darmflora für eine op
 publishDate: "2026-02-13"
 description: "Erfahren Sie, wie Probiotika Ihre Darmgesundheit und Verdauung heute verbessern können."
 tags: ["Daily Tip", "Health"]
-coverImage: ""
+coverImage: "/images/de/cover.svg"
 ---
 
 **Denken Sie, dass Sie eine Tablette benötigen, um Ihre Verdauung zu verbessern?** Dann verpassen Sie möglicherweise die Kraft von Probiotika – unverdauliche Fasern, die die nützlichen Bakterien im Darm ernähren. Diese freundlichen Mikroorganismen sind entscheidend für die Aufspaltung von Nahrung, die Aufnahme von Nährstoffen und sogar das Stärken Ihres Immunsystems.

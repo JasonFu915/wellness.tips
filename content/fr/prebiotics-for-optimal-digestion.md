@@ -3,7 +3,7 @@ title: "Le rôle des prébiotiques dans l'amélioration de la flore intestinale 
 publishDate: "2026-02-13"
 description: "Découvrez comment les prébiotiques peuvent améliorer votre santé intestinale et votre digestion dès aujourd'hui."
 tags: ["Daily Tip", "Health"]
-coverImage: ""
+coverImage: "/images/fr/cover.svg"
 ---
 
 **Pensez-vous qu'il faut une pilule pour améliorer votre digestion ?** Vous pourriez manquer le pouvoir des prébiotiques — des fibres indigestibles qui nourrissent les bonnes bactéries de votre intestin. Ces micro-organismes amicaux sont essentiels pour décomposer les aliments, absorber les nutriments et même soutenir votre système immunitaire.

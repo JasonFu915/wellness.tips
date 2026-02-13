@@ -39,6 +39,7 @@ jobs:
       - name: Generate Daily Tip
         env:
           DASHSCOPE_API_KEY: ${{ secrets.DASHSCOPE_API_KEY }}
+          UNSPLASH_ACCESS_KEY: ${{ secrets.UNSPLASH_ACCESS_KEY }}
         run: |
           python scripts/generate_daily_tip.py
 

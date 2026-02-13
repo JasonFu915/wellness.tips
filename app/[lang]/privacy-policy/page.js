@@ -1,6 +1,24 @@
 import Link from "next/link";
+import { getSiteUrl } from "../../../lib/posts";
 
-export default function PrivacyPolicy() {
+export async function generateMetadata({ params }) {
+  const siteUrl = getSiteUrl();
+  return {
+    title: "Privacy Policy",
+    alternates: {
+      canonical: `${siteUrl}/${params.lang}/privacy-policy`,
+      languages: {
+        en: `${siteUrl}/en/privacy-policy`,
+        zh: `${siteUrl}/zh/privacy-policy`,
+        es: `${siteUrl}/es/privacy-policy`,
+        fr: `${siteUrl}/fr/privacy-policy`,
+        de: `${siteUrl}/de/privacy-policy`,
+      },
+    },
+  };
+}
+
+export default function PrivacyPolicy({ params }) {
   return (
     <div className="container mx-auto max-w-4xl px-4 py-16">
       <div className="prose prose-slate mx-auto dark:prose-invert">
@@ -74,8 +92,8 @@ export default function PrivacyPolicy() {
         <p>If you make a request, we have one month to respond to you. If you would like to exercise any of these rights, please contact us.</p>
 
         <div className="mt-12 flex justify-center">
-          <Link href="/" className="rounded-full bg-primary-600 px-6 py-2 text-white hover:bg-primary-700">
-            Back to Home
+          <Link href={`/${params.lang}`} className="rounded-full bg-primary-600 px-6 py-2 text-white hover:bg-primary-700">
+            {params.lang === 'zh' ? '返回首页' : 'Back to Home'}
           </Link>
         </div>
       </div>

@@ -3,7 +3,7 @@ title: "Die Wissenschaft der Haltungsverbesserung: Wie die Wirbelsäulenverstell
 publishDate: "2026-02-12"
 description: "Erfahren Sie, wie eine korrigierte Haltung den chronischen Rückenschmerz reduzieren und Ihre allgemeine Gesundheit verbessern kann."
 tags: ["Daily Tip", "Health"]
-coverImage: ""
+coverImage: "/images/de/cover.svg"
 ---
 
 ### Die versteckte Ursache für Ihren Rückenschmerz

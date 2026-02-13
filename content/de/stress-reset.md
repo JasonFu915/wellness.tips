@@ -4,6 +4,7 @@ description: "Eine kurze Übung, um das Nervensystem zu beruhigen."
 publishDate: "2026-02-07"
 tags: ["stress", "atmung", "fokus"]
 lang: "de"
+coverImage: "/images/de/cover.svg"
 ---
 
 ![Stress Illustration](/images/de/cover.svg)

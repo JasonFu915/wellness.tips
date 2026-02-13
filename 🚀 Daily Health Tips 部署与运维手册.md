@@ -61,6 +61,7 @@ git push origin main
 | Name | Value | 说明 |
 |------|-------|------|
 | `DASHSCOPE_API_KEY` | `sk-xxxxxxxx` | 你的阿里云 API Key，用于 Python 脚本生成内容 |
+| `UNSPLASH_ACCESS_KEY` | `xxxxxxxx` | Unsplash Access Key，用于自动获取高清封面图 |
 | `VERCEL_DEPLOY_HOOK` | (稍后填) | ⚠️ 这一步先跳过，等 Vercel 项目创建好后再回来填 |
 
 ---

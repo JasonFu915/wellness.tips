@@ -3,7 +3,7 @@ title: "每日感恩仪式对皮质醇水平和睡眠质量的影响：科学视
 publishDate: "2026-02-12"
 description: "科学研究表明，每日感恩可以降低压力并改善睡眠。从今天开始。"
 tags: ["Daily Tip", "Health"]
-coverImage: ""
+coverImage: "/images/zh/cover.svg"
 ---
 
 **你认为需要8小时睡眠？不一定。**

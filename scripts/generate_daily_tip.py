@@ -6,6 +6,11 @@ from slugify import slugify
 import re
 import requests
 import json
+import uuid
+from dotenv import load_dotenv
+
+# Load environment variables from .env file
+load_dotenv()
 
 # Initialize DashScope
 api_key = os.getenv('DASHSCOPE_API_KEY')
@@ -70,9 +75,9 @@ def brainstorm_topic(category, existing_slugs):
     Your task: Propose 1 UNIQUE, SPECIFIC, and SCIENTIFICALLY ACCURATE health article title about "{category}".
     
     Constraints:
-    1. The title must be catchy but credible (no clickbait).
+    1. The title must be catchy, SEO-friendly, and include a primary keyword.
     2. It must be distinct from these existing articles: {', '.join(sample_slugs)}
-    3. Focus on a specific angle (e.g., instead of "Drink Water", suggest "Why Warm Water Boosts Digestion").
+    3. Focus on a specific angle (e.g., instead of "Drink Water", suggest "7 Surprising Benefits of Warm Water for Digestion").
     4. Return ONLY the English title string. No quotes, no explanations.
     """
     
@@ -95,11 +100,11 @@ def get_unsplash_image(keyword):
     """
     Fetch a relevant image from Unsplash API.
     Requires UNSPLASH_ACCESS_KEY env var.
-    Fallback to a default placeholder if failed.
+    Fallback to empty string if failed (handled by caller).
     """
     access_key = os.environ.get('UNSPLASH_ACCESS_KEY')
     if not access_key:
-        print("::warning::UNSPLASH_ACCESS_KEY not found. Using default placeholder.")
+        print("::warning::UNSPLASH_ACCESS_KEY not found.")
         return ""
 
     url = "https://api.unsplash.com/search/photos"
@@ -129,40 +134,46 @@ def generate_content(topic):
     Output Format: JSON with the following structure for 5 languages (en, zh, es, fr, de):
     {{
       "slug": "english-slug-based-on-title",
-      "en": {{ "title": "...", "description": "...", "content": "Markdown content..." }},
-      "zh": {{ "title": "...", "description": "...", "content": "Markdown content..." }},
-      "es": {{ "title": "...", "description": "...", "content": "Markdown content..." }},
-      "fr": {{ "title": "...", "description": "...", "content": "Markdown content..." }},
-      "de": {{ "title": "...", "description": "...", "content": "Markdown content..." }}
+      "en": {{ "title": "...", "description": "...", "content": "Markdown content...", "tags": ["Tag1", "Tag2"] }},
+      "zh": {{ "title": "...", "description": "...", "content": "Markdown content...", "tags": ["Tag1", "Tag2"] }},
+      "es": {{ "title": "...", "description": "...", "content": "Markdown content...", "tags": ["Tag1", "Tag2"] }},
+      "fr": {{ "title": "...", "description": "...", "content": "Markdown content...", "tags": ["Tag1", "Tag2"] }},
+      "de": {{ "title": "...", "description": "...", "content": "Markdown content...", "tags": ["Tag1", "Tag2"] }}
     }}
 
     Requirements:
     1. **Tone & Style**:
-       - Professional yet accessible (like a top-tier health blog)
+       - Professional yet accessible (like a top-tier health blog: Healthline, Mayo Clinic)
        - Scientific but jargon-free (explain terms like "melatonin" or "hydration" in simple analogies)
        - Written in second person ("you") to build connection
-       - **Cite 1-2 specific studies** (e.g., "A 2023 study in Nature found...") to boost credibility.
+       - **Cite 2-3 specific studies** (e.g., "A 2023 study in Nature found...") to boost credibility.
+       - Use an engaging, hook-driven opening.
 
     2. **Content Structure**:
-       - Start with a relatable problem or myth (e.g., "Think you need 8 hours? Not necessarily.")
-       - Include 1–2 key scientific insights from reputable sources (e.g., NIH, WHO, Mayo Clinic)
-       - Provide 3–5 actionable steps (use bullet points)
-       - End with an empowering takeaway ("Small changes add up!")
+       - **Title**: Catchy, benefit-driven, under 60 chars.
+       - **Introduction**: Start with a relatable problem or myth.
+       - **The Science**: Include 1–2 key scientific insights from reputable sources (e.g., NIH, WHO, Mayo Clinic).
+       - **Actionable Steps**: Provide 3–5 concrete, easy-to-follow steps (use bullet points).
+       - **FAQ Section**: Include 2-3 common questions and answers at the end.
+       - **Conclusion**: End with an empowering takeaway.
 
     3. **Length & Format**:
-       - 300–500 words per language
-       - Use Markdown: H2/H3 headings, bullet points, bold for key tips, blockquotes for warnings
-       - Avoid fluff—every sentence should deliver value
+       - **800–1200 words** per language (Deep Dive).
+       - Use Markdown: H2/H3 headings, bullet points, bold for key tips, blockquotes for warnings.
+       - Avoid fluff—every sentence should deliver value.
 
-    4. **User Value Focus**:
-       - Answer: “What can the reader DO today?”
-       - Address common barriers (e.g., “No time? Try this 60-second version”)
-       - Include one surprising fact or counterintuitive insight
+    4. **SEO Optimization**:
+       - Use the main keyword naturally in the first 100 words.
+       - Use LSI keywords (related terms) throughout.
+       - `description`: ≤160 characters, compelling meta description including the main keyword.
+       - `tags`: 3-5 relevant tags.
 
     5. **Technical Requirements**:
        - Generate a URL-friendly English slug (e.g., `sleep-better-without-pills`)
+       - `tags`: Generate 3-5 relevant tags for each language in the JSON.
        - Output as valid JSON
-       - `description`: ≤160 characters, compelling meta description for SEO
+       - Ensure strict JSON format for parsing.
+    """
     """
     
     try:
@@ -194,20 +205,37 @@ def save_files(json_data):
             slug = slugify(data['en']['title'])
             
         today = datetime.date.today().isoformat()
+        post_id = str(uuid.uuid4())
         
         # Fetch cover image based on English title/keywords
         cover_image = get_unsplash_image(data['en']['title'])
+        if not cover_image:
+            # Fallback to a default image if API fails or no key
+            print("::warning::No cover image found. Using default.")
+            # We use a path that we know exists or will be handled by the buildCover fallback in frontend
+            # But better to have a physical file reference if possible.
+            # Since we don't know if a physical default exists, we leave it empty
+            # and let the frontend's buildCover handle it, OR use the SVG path we saw in docs.
+            cover_image = "/images/en/cover.svg" 
+
         print(f"Selected cover image: {cover_image}")
         
         for lang in LANGUAGES:
             if lang in data:
                 content = data[lang]
+                # Use language-specific default cover if available, or fall back to English/Generic
+                current_cover = cover_image
+                if cover_image == "/images/en/cover.svg" and lang != 'en':
+                     current_cover = f"/images/{lang}/cover.svg"
+
                 file_content = f"""---
+id: "{post_id}"
 title: "{content['title']}"
-publishDate: "{today}"
 description: "{content['description']}"
-tags: ["Daily Tip", "Health"]
-coverImage: "{cover_image}"
+publishDate: "{today}"
+tags: {json.dumps(data.get('tags', ["Daily Tip", "Health"]), ensure_ascii=False)}
+lang: "{lang}"
+coverImage: "{current_cover}"
 ---
 
 {content['content']}

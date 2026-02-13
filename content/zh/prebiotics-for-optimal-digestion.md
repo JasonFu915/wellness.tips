@@ -3,7 +3,7 @@ title: "益生元在增强肠道微生物群以优化消化中的作用"
 publishDate: "2026-02-13"
 description: "了解如何通过益生元改善肠道健康并提升消化功能。"
 tags: ["Daily Tip", "Health"]
-coverImage: ""
+coverImage: "/images/zh/cover.svg"
 ---
 
 **你是否认为需要药片来改善消化？** 你可能忽略了益生元的力量——这些不可消化的纤维可以滋养肠道中的有益细菌。这些友好的微生物对于分解食物、吸收营养甚至支持免疫系统至关重要。

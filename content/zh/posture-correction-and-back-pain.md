@@ -3,7 +3,7 @@ title: "姿势矫正的科学：脊柱对慢性背痛的影响"
 publishDate: "2026-02-12"
 description: "了解如何通过矫正姿势来减轻慢性背痛并改善整体健康。"
 tags: ["Daily Tip", "Health"]
-coverImage: ""
+coverImage: "/images/zh/cover.svg"
 ---
 
 ### 背痛的隐藏原因

@@ -3,7 +3,7 @@ title: "La ciencia de la corrección de postura: Cómo la alineación espinal af
 publishDate: "2026-02-12"
 description: "Descubre cómo corregir tu postura puede reducir el dolor de espalda crónico y mejorar tu salud general."
 tags: ["Daily Tip", "Health"]
-coverImage: ""
+coverImage: "/images/es/cover.svg"
 ---
 
 ### La causa oculta de tu dolor de espalda

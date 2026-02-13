@@ -3,7 +3,7 @@ title: "Der Einfluss täglicher Dankbarkeitsrituale auf Cortisolwerte und Schlaf
 publishDate: "2026-02-12"
 description: "Wissenschaft zeigt, wie tägliche Dankbarkeit Stress verringert und Schlaf verbessert. Beginnen Sie heute."
 tags: ["Daily Tip", "Health"]
-coverImage: ""
+coverImage: "/images/de/cover.svg"
 ---
 
 **Denken Sie, dass Sie 8 Stunden Schlaf benötigen? Nicht unbedingt.**

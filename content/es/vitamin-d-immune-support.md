@@ -3,7 +3,7 @@ title: "El papel de la vitamina D en la modulación de la respuesta inmunológic
 publishDate: "2026-02-13"
 description: "Fortalece tu sistema inmunológico con estrategias respaldadas por la ciencia."
 tags: ["Daily Tip", "Health"]
-coverImage: ""
+coverImage: "/images/es/cover.svg"
 ---
 
 **¿Necesitas 8 horas de sueño? No necesariamente.**

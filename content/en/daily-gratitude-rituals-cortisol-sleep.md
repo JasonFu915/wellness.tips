@@ -3,7 +3,7 @@ title: "The Impact of Daily Gratitude Rituals on Cortisol Levels and Sleep Quali
 publishDate: "2026-02-12"
 description: "Science shows how daily gratitude can lower stress and improve sleep. Start today."
 tags: ["Daily Tip", "Health"]
-coverImage: ""
+coverImage: "/images/en/cover.svg"
 ---
 
 **Think you need 8 hours? Not necessarily.**

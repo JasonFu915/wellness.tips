@@ -3,7 +3,7 @@ title: "Die Rolle von Vitamin D bei der Modulation der Immunantwort auf Virusinf
 publishDate: "2026-02-13"
 description: "Stärken Sie Ihr Immunsystem mit wissenschaftlich fundierten Strategien."
 tags: ["Daily Tip", "Health"]
-coverImage: ""
+coverImage: "/images/de/cover.svg"
 ---
 
 **Brauchen Sie 8 Stunden Schlaf? Nicht unbedingt.**

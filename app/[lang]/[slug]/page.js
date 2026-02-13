@@ -9,7 +9,8 @@ import {
   getAllSlugs,
   getAllPosts,
   getPostBySlug,
-  getSiteUrl
+  getSiteUrl,
+  getPostAlternates
 } from "../../../lib/posts";
 
 export async function generateStaticParams() {
@@ -18,11 +19,24 @@ export async function generateStaticParams() {
 
 export async function generateMetadata({ params }) {
   const post = getPostBySlug(params.lang, params.slug);
+  if (!post) {
+      return {};
+  }
+  
+  const siteUrl = getSiteUrl();
+  const alternatesMap = getPostAlternates(params.slug);
+  const languages = {};
+  
+  Object.keys(alternatesMap).forEach(lang => {
+      languages[lang] = `${siteUrl}/${lang}/${alternatesMap[lang]}`;
+  });
+
   return {
     title: post.title,
     description: post.description,
     alternates: {
-      canonical: `/${params.lang}/${params.slug}`
+      canonical: `${siteUrl}/${params.lang}/${params.slug}`,
+      languages: languages
     },
     openGraph: {
       title: post.title,
@@ -91,30 +105,27 @@ export default async function PostDetailPage({ params }) {
     image: post.coverImage || buildCover(post.title, true)
   };
 
+  const breadcrumbSchema = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [{
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": `${siteUrl}/${params.lang}`
+    }, {
+      "@type": "ListItem",
+      "position": 2,
+      "name": post.title,
+      "item": `${siteUrl}/${params.lang}/${params.slug}`
+    }]
+  };
+
   const websiteSchema = {
     "@context": "https://schema.org",
     "@type": "WebSite",
     name: "Daily Health Tips",
     url: siteUrl
-  };
-
-  const breadcrumbSchema = {
-    "@context": "https://schema.org",
-    "@type": "BreadcrumbList",
-    itemListElement: [
-      {
-        "@type": "ListItem",
-        position: 1,
-        name: "Home",
-        item: `${siteUrl}/${params.lang}`
-      },
-      {
-        "@type": "ListItem",
-        position: 2,
-        name: post.title,
-        item: `${siteUrl}/${params.lang}/${params.slug}`
-      }
-    ]
   };
 
   const shareLabels = {
@@ -128,6 +139,18 @@ export default async function PostDetailPage({ params }) {
   return (
     <div className="bg-slate-50 pb-20 pt-8">
       <div className="container mx-auto max-w-7xl px-4">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(articleSchema) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(websiteSchema) }}
+      />
         {/* Breadcrumb & Back Link */}
         <div className="mb-8 flex items-center gap-2 text-sm text-slate-500">
           <Link href={`/${params.lang}`} className="hover:text-primary-600 transition-colors">
@@ -138,8 +161,8 @@ export default async function PostDetailPage({ params }) {
         </div>
 
         <div className="grid grid-cols-1 gap-12 lg:grid-cols-12">
-          {/* Main Content Column */}
-          <main className="lg:col-span-8">
+        {/* Main Content Column */}
+        <main className="lg:col-span-8">
             <article className="overflow-hidden rounded-3xl bg-white shadow-sm ring-1 ring-slate-100">
               {/* Cover Image */}
               <div className="relative aspect-video w-full bg-slate-100">
@@ -231,19 +254,6 @@ export default async function PostDetailPage({ params }) {
           </div>
         </div>
       </div>
-
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(articleSchema) }}
-      />
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(websiteSchema) }}
-      />
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
-      />
     </div>
   );
 }

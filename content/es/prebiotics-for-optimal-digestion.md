@@ -3,7 +3,7 @@ title: "El papel de los prebióticos en la mejora de la microbiota intestinal pa
 publishDate: "2026-02-13"
 description: "Descubre cómo los prebióticos pueden mejorar tu salud intestinal y la digestión hoy mismo."
 tags: ["Daily Tip", "Health"]
-coverImage: ""
+coverImage: "/images/es/cover.svg"
 ---
 
 **¿Piensas que necesitas una píldora para mejorar tu digestión?** Es posible que estés pasando por alto el poder de los prebióticos, fibra no digerible que alimenta las bacterias buenas en tu intestino. Estos microorganismos amigables son esenciales para descomponer los alimentos, absorber nutrientes y hasta apoyar tu sistema inmunológico.

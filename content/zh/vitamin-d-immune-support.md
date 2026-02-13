@@ -3,7 +3,7 @@ title: "维生素D在调节病毒感染免疫反应中的作用"
 publishDate: "2026-02-13"
 description: "通过科学验证的维生素D策略增强免疫力。"
 tags: ["Daily Tip", "Health"]
-coverImage: ""
+coverImage: "/images/zh/cover.svg"
 ---
 
 **你真的需要8小时睡眠吗？不一定。**

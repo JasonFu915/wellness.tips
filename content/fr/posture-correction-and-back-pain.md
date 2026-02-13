@@ -3,7 +3,7 @@ title: "La science de la correction de la posture : Comment l'alignement vertéb
 publishDate: "2026-02-12"
 description: "Découvrez comment corriger votre posture peut réduire la douleur chronique au dos et améliorer votre santé globale."
 tags: ["Daily Tip", "Health"]
-coverImage: ""
+coverImage: "/images/fr/cover.svg"
 ---
 
 ### La cause cachée de votre douleur au dos

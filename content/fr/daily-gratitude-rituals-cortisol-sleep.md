@@ -3,7 +3,7 @@ title: "L'impact des rituels quotidiens de gratitude sur les niveaux de cortisol
 publishDate: "2026-02-12"
 description: "La science montre comment la gratitude quotidienne peut réduire le stress et améliorer le sommeil. Commencez dès aujourd'hui."
 tags: ["Daily Tip", "Health"]
-coverImage: ""
+coverImage: "/images/fr/cover.svg"
 ---
 
 **Pensez-vous avoir besoin de 8 heures de sommeil ? Pas toujours.**

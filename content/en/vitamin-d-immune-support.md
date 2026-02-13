@@ -3,7 +3,7 @@ title: "The Role of Vitamin D in Modulating Immune Response to Viral Infections"
 publishDate: "2026-02-13"
 description: "Boost your immunity with science-backed vitamin D strategies."
 tags: ["Daily Tip", "Health"]
-coverImage: ""
+coverImage: "/images/en/cover.svg"
 ---
 
 **Think you need 8 hours? Not necessarily.**

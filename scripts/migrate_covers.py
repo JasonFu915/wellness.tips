@@ -2,6 +2,11 @@ import os
 import re
 import requests
 import time
+import yaml
+from dotenv import load_dotenv
+
+# Load environment variables from .env file
+load_dotenv()
 
 # Configuration
 CONTENT_DIR = "content"
@@ -14,7 +19,7 @@ def get_unsplash_image(keyword):
     """
     access_key = os.environ.get('UNSPLASH_ACCESS_KEY')
     if not access_key:
-        print("::error::UNSPLASH_ACCESS_KEY not found. Please set it to run this migration.")
+        print("::warning::UNSPLASH_ACCESS_KEY not found. API calls will fail.")
         return None
 
     url = "https://api.unsplash.com/search/photos"
@@ -42,26 +47,62 @@ def update_file(file_path, image_url):
     with open(file_path, 'r', encoding='utf-8') as f:
         content = f.read()
     
-    # Check if coverImage already exists
-    if 'coverImage:' in content:
-        print(f"Skipping {file_path} (already has coverImage)")
+    # Extract frontmatter
+    match = re.match(r'^---\s*\n([\s\S]*?)\n---\s*\n', content)
+    if not match:
+        print(f"Skipping {file_path} (no frontmatter found)")
         return
 
-    # Add coverImage to frontmatter
-    # Pattern: Look for the end of the frontmatter block (second ---)
-    pattern = r'(^---\s*\n)([\s\S]*?)(\n---)'
+    frontmatter_raw = match.group(1)
+    try:
+        frontmatter = yaml.safe_load(frontmatter_raw) or {}
+    except yaml.YAMLError:
+        print(f"Skipping {file_path} (invalid YAML)")
+        return
+
+    # Check if coverImage is already valid
+    current_cover = frontmatter.get('coverImage')
+    if current_cover and current_cover.strip():
+        # It has a valid cover image
+        return
+
+    # If we are here, we need to update
+    print(f"Updating empty cover for: {file_path}")
     
-    def replacement(match):
-        frontmatter = match.group(2)
-        if not frontmatter.endswith('\n'):
-            frontmatter += '\n'
-        return f"{match.group(1)}{frontmatter}coverImage: \"{image_url}\"{match.group(3)}"
+    # If image_url is provided (from API), use it.
+    # If not, use local default.
+    final_cover = image_url
+    if not final_cover:
+        # Determine lang from path
+        lang = 'en'
+        for l in LANGUAGES:
+            if f"/{l}/" in file_path.replace('\\', '/'):
+                lang = l
+                break
+        final_cover = f"/images/{lang}/cover.svg"
+
+    # Use regex to replace or append coverImage line
+    # We use regex to preserve comments and formatting of other fields if possible, 
+    # rather than dumping the whole YAML back which might change ordering.
     
-    new_content = re.sub(pattern, replacement, content, count=1)
+    if 'coverImage:' in frontmatter_raw:
+        # Replace existing empty key
+        # Look for coverImage: followed by optional whitespace and end of line OR empty quotes
+        new_frontmatter = re.sub(
+            r'^coverImage:\s*(""?|\'\'?)?\s*$', 
+            f'coverImage: "{final_cover}"', 
+            frontmatter_raw, 
+            flags=re.MULTILINE
+        )
+    else:
+        # Append to end
+        new_frontmatter = frontmatter_raw + f'\ncoverImage: "{final_cover}"'
+    
+    new_content = content.replace(frontmatter_raw, new_frontmatter, 1)
     
     with open(file_path, 'w', encoding='utf-8') as f:
         f.write(new_content)
-    print(f"Updated {file_path}")
+    print(f"-> Saved {file_path}")
 
 def main():
     # Only iterate through English files to get the "source of truth" keywords
@@ -73,37 +114,59 @@ def main():
 
     files = [f for f in os.listdir(en_dir) if f.endswith('.md')]
     
-    print(f"Found {len(files)} articles to process...")
+    print(f"Scanning {len(files)} article groups for missing covers...")
 
     for filename in files:
         slug = filename.replace('.md', '')
         
         # 1. Read the English file to extract title/keywords
         en_path = os.path.join(en_dir, filename)
-        with open(en_path, 'r', encoding='utf-8') as f:
-            content = f.read()
-            # Extract title using regex
-            title_match = re.search(r'title:\s*"(.*?)"', content)
-            title = title_match.group(1) if title_match else slug.replace('-', ' ')
         
-        print(f"Processing: {slug} (Query: {title})")
+        # Helper to get title without parsing everything
+        title = slug.replace('-', ' ')
+        try:
+            with open(en_path, 'r', encoding='utf-8') as f:
+                header = f.read(1000) # Read first 1000 chars
+                title_match = re.search(r'title:\s*"(.*?)"', header)
+                if title_match:
+                    title = title_match.group(1)
+        except:
+            pass
         
-        # 2. Fetch Image
-        image_url = get_unsplash_image(title)
+        # 2. Check all languages for this slug
+        # We only fetch the image IF we find at least one missing cover
+        image_url = None 
+        fetched_tried = False
         
-        if not image_url:
-            print(f"Failed to get image for {slug}, skipping...")
-            continue
-            
-        # 3. Update ALL language versions
         for lang in LANGUAGES:
             lang_path = os.path.join(CONTENT_DIR, lang, filename)
-            if os.path.exists(lang_path):
+            if not os.path.exists(lang_path):
+                continue
+                
+            # Check if needs update
+            needs_update = False
+            try:
+                with open(lang_path, 'r', encoding='utf-8') as f:
+                    content = f.read()
+                    fm_match = re.match(r'^---\s*\n([\s\S]*?)\n---\s*\n', content)
+                    if fm_match:
+                        fm = yaml.safe_load(fm_match.group(1))
+                        if not fm.get('coverImage') or not fm.get('coverImage').strip():
+                            needs_update = True
+            except:
+                continue
+
+            if needs_update:
+                # Fetch image only once per slug group
+                if not image_url and not fetched_tried:
+                    print(f"Fetching Unsplash image for query: {title}")
+                    image_url = get_unsplash_image(title)
+                    fetched_tried = True
+                    if image_url:
+                        # Sleep only if we actually called the API
+                        time.sleep(1) 
+                
                 update_file(lang_path, image_url)
-        
-        # Sleep to respect API rate limits (50 requests/hour for free tier demo, but usually 5000 for registered apps)
-        # Assuming user has a valid key, but let's be safe.
-        time.sleep(0.5)
 
 if __name__ == "__main__":
     main()
