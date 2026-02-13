@@ -3,7 +3,7 @@ title: "The Role of Prebiotics in Enhancing Gut Microbiota for Optimal Digestion
 publishDate: "2026-02-13"
 description: "Discover how prebiotics can boost your gut health and improve digestion today."
 tags: ["Daily Tip", "Health"]
-coverImage: "/images/en/cover.svg"
+coverImage: "https://images.unsplash.com/photo-1721286919949-8fec377f37ad?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w4NzMyOTR8MHwxfHNlYXJjaHwxfHxUaGUlMjBSb2xlJTIwb2YlMjBQcmViaW90aWNzJTIwaW4lMjBFbmhhbmNpbmclMjBHdXQlMjBNaWNyb2Jpb3RhJTIwZm9yJTIwT3B0aW1hbCUyMERpZ2VzdGlvbnxlbnwwfDB8fHwxNzcwOTY5NzQ4fDA&ixlib=rb-4.1.0&q=80&w=1080"
 ---
 
 **Think you need a pill to fix digestion?** You might be overlooking the power of prebiotics—non-digestible fibers that feed the good bacteria in your gut. These friendly microbes are essential for breaking down food, absorbing nutrients, and even supporting your immune system.

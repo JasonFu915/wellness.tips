@@ -104,8 +104,12 @@ def update_file(file_path, image_url):
     if 'coverImage:' in frontmatter_raw:
         # Replace existing empty key
         # Look for coverImage: followed by optional whitespace and end of line OR empty quotes
+        # We need to be careful not to match lines that already have a valid value if we are just "updating empty"
+        # But here we know we are updating because update_file is called.
+        
+        # This regex replaces the value of coverImage: ...
         new_frontmatter = re.sub(
-            r'^coverImage:\s*(""?|\'\'?)?\s*$', 
+            r'^coverImage:.*$', 
             f'coverImage: "{final_cover}"', 
             frontmatter_raw, 
             flags=re.MULTILINE

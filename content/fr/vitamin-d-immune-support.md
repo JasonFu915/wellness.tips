@@ -3,7 +3,7 @@ title: "Le rôle de la vitamine D dans la modulation de la réponse immunitaire 
 publishDate: "2026-02-13"
 description: "Renforcez votre système immunitaire avec des stratégies basées sur la science."
 tags: ["Daily Tip", "Health"]
-coverImage: "/images/fr/cover.svg"
+coverImage: "https://images.unsplash.com/photo-1517408294408-a8da645a3c11?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w4NzMyOTR8MHwxfHNlYXJjaHwxfHxUaGUlMjBSb2xlJTIwb2YlMjBWaXRhbWluJTIwRCUyMGluJTIwTW9kdWxhdGluZyUyMEltbXVuZSUyMFJlc3BvbnNlJTIwdG8lMjBWaXJhbCUyMEluZmVjdGlvbnN8ZW58MHwwfHx8MTc3MDk2OTc1MXww&ixlib=rb-4.1.0&q=80&w=1080"
 ---
 
 **Avez-vous besoin de 8 heures de sommeil ? Pas nécessairement.**

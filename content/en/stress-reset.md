@@ -4,7 +4,7 @@ description: "A fast routine to calm the nervous system and regain focus during 
 publishDate: "2026-02-07"
 tags: ["stress", "focus", "breathing"]
 lang: "en"
-coverImage: "/images/en/cover.svg"
+coverImage: "https://images.unsplash.com/photo-1477332552946-cfb384aeaf1c?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w4NzMyOTR8MHwxfHNlYXJjaHwxfHxoZWFsdGglMjB3ZWxsbmVzc3xlbnwwfDB8fHwxNzcwOTcwMjkxfDA&ixlib=rb-4.1.0&q=80&w=1080"
 ---
 
 ![Stress reset illustration](/images/en/cover.svg)

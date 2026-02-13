@@ -3,7 +3,7 @@ title: "The Science of Posture Correction: How Spinal Alignment Impacts Chronic 
 publishDate: "2026-02-12"
 description: "Learn how correcting your posture can reduce chronic back pain and improve your overall health."
 tags: ["Daily Tip", "Health"]
-coverImage: "/images/en/cover.svg"
+coverImage: "https://images.unsplash.com/photo-1606446585287-d63793fcfbbd?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w4NzMyOTR8MHwxfHNlYXJjaHwxfHxUaGUlMjBTY2llbmNlJTIwb2YlMjBQb3N0dXJlJTIwQ29ycmVjdGlvbiUzQSUyMEhvdyUyMFNwaW5hbCUyMEFsaWdubWVudCUyMEltcGFjdHMlMjBDaHJvbmljJTIwQmFjayUyMFBhaW58ZW58MHwwfHx8MTc3MDk2OTc0Nnww&ixlib=rb-4.1.0&q=80&w=1080"
 ---
 
 ### The Hidden Cause of Your Back Pain

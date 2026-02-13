@@ -3,7 +3,7 @@ title: "El impacto de los rituales diarios de gratitud en los niveles de cortiso
 publishDate: "2026-02-12"
 description: "La ciencia muestra cómo la gratitud diaria puede reducir el estrés y mejorar el sueño. Comienza hoy."
 tags: ["Daily Tip", "Health"]
-coverImage: "/images/es/cover.svg"
+coverImage: "https://images.unsplash.com/photo-1522587750645-7e0e798b2b59?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w4NzMyOTR8MHwxfHNlYXJjaHwxfHxUaGUlMjBJbXBhY3QlMjBvZiUyMERhaWx5JTIwR3JhdGl0dWRlJTIwUml0dWFscyUyMG9uJTIwQ29ydGlzb2wlMjBMZXZlbHMlMjBhbmQlMjBTbGVlcCUyMFF1YWxpdHklM0ElMjBBJTIwU2NpZW50aWZpYyUyMFBlcnNwZWN0aXZlfGVufDB8MHx8fDE3NzA5Njk3NDN8MA&ixlib=rb-4.1.0&q=80&w=1080"
 ---
 
 **¿Piensas que necesitas 8 horas de sueño? No siempre es así.**
