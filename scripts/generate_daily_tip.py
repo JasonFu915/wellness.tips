@@ -154,11 +154,11 @@ def generate_content(topic):
     {{
       "slug": "english-slug-based-on-title",
       "image_search_query": "short english keyword for unsplash (max 3 words)",
-      "en": {{ "title": "...", "description": "...", "content": "Markdown content...", "tags": ["Tag1", "Tag2"] }},
-      "zh": {{ "title": "...", "description": "...", "content": "Markdown content...", "tags": ["Tag1", "Tag2"] }},
-      "es": {{ "title": "...", "description": "...", "content": "Markdown content...", "tags": ["Tag1", "Tag2"] }},
-      "fr": {{ "title": "...", "description": "...", "content": "Markdown content...", "tags": ["Tag1", "Tag2"] }},
-      "de": {{ "title": "...", "description": "...", "content": "Markdown content...", "tags": ["Tag1", "Tag2"] }}
+      "en": {{ "title": "...", "description": "...", "summary": "...", "content": "Markdown content...", "tags": ["Tag1", "Tag2"] }},
+      "zh": {{ "title": "...", "description": "...", "summary": "...", "content": "Markdown content...", "tags": ["Tag1", "Tag2"] }},
+      "es": {{ "title": "...", "description": "...", "summary": "...", "content": "Markdown content...", "tags": ["Tag1", "Tag2"] }},
+      "fr": {{ "title": "...", "description": "...", "summary": "...", "content": "Markdown content...", "tags": ["Tag1", "Tag2"] }},
+      "de": {{ "title": "...", "description": "...", "summary": "...", "content": "Markdown content...", "tags": ["Tag1", "Tag2"] }}
     }}
 
     Requirements:
@@ -175,6 +175,7 @@ def generate_content(topic):
        - Scientific but accessible.
        - Direct address ("you").
        - **Cite 2-3 specific studies** (e.g., "A 2023 Nature study...") to prove the controversial/hooky title is real.
+       - **MANDATORY**: End the article with a "References" section listing the sources/studies mentioned.
 
     3. **Content Structure**:
        - **Introduction**: Hook the reader immediately.
@@ -182,9 +183,11 @@ def generate_content(topic):
        - **Actionable Steps**: 3-5 bullet points.
        - **FAQ**: 2-3 questions.
        - **Conclusion**: Empowering takeaway.
+       - **References**: List of sources.
 
     4. **Technical**:
        - Length: 800-1200 words per language.
+       - `summary`: A "TL;DR" (Too Long; Didn't Read) section. 3 short, punchy bullet points summarizing the key takeaways. Use emojis if appropriate.
        - `image_search_query`: Since the title might be abstract (e.g., "Stop Doing This"), provide a CONCRETE noun for image search (e.g., "man eating apple" or "sleeping woman").
        - `description`: < 160 chars, SEO optimized.
        - Valid JSON output only.
@@ -250,11 +253,13 @@ def save_files(json_data):
 
                 # Construct file content safely avoiding triple quotes
                 tags_json = json.dumps(content.get('tags', ["Daily Tip", "Health"]), ensure_ascii=False)
+                summary_json = json.dumps(content.get('summary', ""), ensure_ascii=False)
                 file_content = (
                     f"---\n"
                     f'id: "{post_id}"\n'
                     f'title: "{content["title"]}"\n'
                     f'description: "{content["description"]}"\n'
+                    f'summary: {summary_json}\n'
                     f'publishDate: "{today}"\n'
                     f'tags: {tags_json}\n'
                     f'lang: "{lang}"\n'

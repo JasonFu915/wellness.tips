@@ -150,6 +150,14 @@ export default async function PostDetailPage({ params }) {
     de: "Teilen Sie diesen Tipp mit Freunden und Familie"
   };
 
+  const summaryLabels = {
+    en: "TL;DR - Quick Summary",
+    zh: "文章摘要 (TL;DR)",
+    es: "Resumen Rápido",
+    fr: "Résumé Rapide",
+    de: "Zusammenfassung"
+  };
+
   return (
     <div className="bg-slate-50 pb-20 pt-8">
       <div className="container mx-auto max-w-7xl px-4">
@@ -222,6 +230,18 @@ export default async function PostDetailPage({ params }) {
 
               {/* Content Body */}
               <div className="px-6 py-10 md:px-10 md:py-12">
+                {post.summary && (
+                  <div className="mb-10 rounded-2xl bg-blue-50/50 p-6 ring-1 ring-blue-100 lg:p-8">
+                    <h3 className="mb-4 flex items-center gap-2 text-lg font-bold text-blue-900">
+                      <span className="text-xl">⚡</span>
+                      {summaryLabels[params.lang] || summaryLabels.en}
+                    </h3>
+                    <div className="whitespace-pre-line text-base leading-relaxed text-blue-800/80 font-medium">
+                      {post.summary}
+                    </div>
+                  </div>
+                )}
+
                 <div className="prose prose-lg prose-slate max-w-none prose-headings:font-bold prose-headings:text-slate-800 prose-p:text-slate-600 prose-a:text-primary-600 hover:prose-a:text-primary-500 prose-img:rounded-2xl prose-strong:text-slate-800">
                   <div dangerouslySetInnerHTML={{ __html: first }} />
                   
