@@ -192,7 +192,6 @@ def generate_content(topic):
        - Output as valid JSON
        - Ensure strict JSON format for parsing.
     """
-    """
     
     try:
         response = dashscope.Generation.call(
